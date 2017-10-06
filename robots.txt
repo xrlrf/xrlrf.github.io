@@ -4,6 +4,9 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
+Allow: /about/
+Allow: /404/
+Allow: /note/
 
 Disallow: /vendors/
 Disallow: /js/
