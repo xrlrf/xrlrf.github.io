@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-06T09:02:27.427Z</updated>
+  <updated>2017-10-06T09:40:09.672Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Next主题 文章添加阅读次数，访问量等</title>
+    <link href="http://yoursite.com/2017/10/06/Hexo-Next%E4%B8%BB%E9%A2%98-%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%EF%BC%8C%E8%AE%BF%E9%97%AE%E9%87%8F%E7%AD%89/"/>
+    <id>http://yoursite.com/2017/10/06/Hexo-Next主题-文章添加阅读次数，访问量等/</id>
+    <published>2017-10-06T09:38:07.000Z</published>
+    <updated>2017-10-06T09:40:09.672Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示："><a href="#本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示：" class="headerlink" title="本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示："></a>本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示：</h3><p><img src="http://img.blog.csdn.net/20171006173642716?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p><h3 id="打开-Hexo-目录下的-themes-next-config-yml-文件"><a href="#打开-Hexo-目录下的-themes-next-config-yml-文件" class="headerlink" title="打开 Hexo 目录下的 \themes\next\ _config.yml 文件"></a>打开 Hexo 目录下的 \themes\next\ _config.yml 文件</h3><p><img src="http://img.blog.csdn.net/20171006173704062?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示：&quot;&gt;&lt;a href=&quot;#本章所讲给文章设置阅读量，启用不蒜子统计，仅限于文章页面显示阅读书，在首页不显示。效果如下图所示：&quot; class=&quot;headerlink&quot; t
+      
+    
+    </summary>
+    
+      <category term="Hexo学习" scheme="http://yoursite.com/categories/Hexo%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>markdown 编辑器： remarkable 安装(ubuntu)</title>
