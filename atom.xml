@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-05T15:22:50.669Z</updated>
+  <updated>2017-10-06T07:36:02.190Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客搭建（next主题系列详解）</title>
+    <link href="http://yoursite.com/2017/10/06/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88next%E4%B8%BB%E9%A2%98%E7%B3%BB%E5%88%97%E8%AF%A6%E8%A7%A3%EF%BC%89/"/>
+    <id>http://yoursite.com/2017/10/06/Hexo博客搭建（next主题系列详解）/</id>
+    <published>2017-10-06T07:34:50.000Z</published>
+    <updated>2017-10-06T07:36:02.190Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="hexo的next主题配置详解"><a href="#hexo的next主题配置详解" class="headerlink" title="hexo的next主题配置详解"></a><a href="http://michael728.github.io/2015/11/30/hexo-next-optimize/" target="_blank" rel="external">hexo的next主题配置详解</a></h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;hexo的next主题配置详解&quot;&gt;&lt;a href=&quot;#hexo的next主题配置详解&quot; class=&quot;headerlink&quot; title=&quot;hexo的next主题配置详解&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://michael728.github.io/2015
+      
+    
+    </summary>
+    
+      <category term="Hexo学习" scheme="http://yoursite.com/categories/Hexo%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

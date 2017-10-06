@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/10/06/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88next%E4%B8%BB%E9%A2%98%E7%B3%BB%E5%88%97%E8%AF%A6%E8%A7%A3%EF%BC%89/</loc>
+    
+    <lastmod>2017-10-06T07:36:02.190Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2017-10-06T06:56:28.611Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2017-10-06T06:50:19.912Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/baidu_verify_o8ecsjA2rg.html</loc>
     
     <lastmod>2017-10-06T06:05:20.503Z</lastmod>
@@ -30,13 +51,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2017-10-05T15:21:46.438Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/note/index.html</loc>
     
     <lastmod>2017-10-05T14:59:35.884Z</lastmod>
@@ -47,13 +61,6 @@
     <loc>http://yoursite.com/404/index.html</loc>
     
     <lastmod>2017-10-05T10:10:14.380Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
-    
-    <lastmod>2017-10-05T09:05:09.909Z</lastmod>
     
   </url>
   
