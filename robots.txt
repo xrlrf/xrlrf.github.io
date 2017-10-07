@@ -17,3 +17,5 @@ Disallow: /fancybox/
 
 Sitemap: https://xrlrf.github.io/sitemap.xml
 Sitemap: https://xrlrf.github.io/baidusitemap.xml
+Sitemap: https://wustxiao.cn/sitemap.xml
+Sitemap: https://wustxiao.cn/baidusitemap.xml
