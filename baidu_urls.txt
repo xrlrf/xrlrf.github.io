@@ -1,0 +1,5 @@
+http://wustxiao.cn/2017/10/06/Hexo-Next主题-文章添加阅读次数，访问量等/
+http://wustxiao.cn/2017/10/06/markdown-编辑器：-remarkable-安装-ubuntu/
+http://wustxiao.cn/2017/10/06/Hexo博客搭建（next主题系列详解）/
+http://wustxiao.cn/2017/10/05/hello-world/
+http://wustxiao.cn/2017/10/05/Hexo博客使用系列（四）——文章里嵌入音乐播放器/
