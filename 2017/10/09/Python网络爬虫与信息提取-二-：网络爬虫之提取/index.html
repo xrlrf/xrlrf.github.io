@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python," />
 
 
 
@@ -81,16 +81,29 @@
 
 
 
-<meta name="description" content="真正的荣耀发端于埋头苦干征服自己！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiaorui&#39;s blog">
-<meta property="og:url" content="http://wustxiao.cn/archives/2017/10/index.html">
+<meta name="description" content="Beautiful Soup库可对HTML/XML格式进行解析并提取相关信息 安装:  pip install beautifulsoup4 小测： 1234567&amp;gt;&amp;gt;&amp;gt; import requests&amp;gt;&amp;gt;&amp;gt; r = requests.get(&amp;quot;http://python123.io/ws/demo.html&amp;quot;)&amp;gt;&amp;gt;&amp;gt; r.">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python网络爬虫与信息提取(二)：网络爬虫之提取">
+<meta property="og:url" content="http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/index.html">
 <meta property="og:site_name" content="xiaorui&#39;s blog">
-<meta property="og:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta property="og:description" content="Beautiful Soup库可对HTML/XML格式进行解析并提取相关信息 安装:  pip install beautifulsoup4 小测： 1234567&amp;gt;&amp;gt;&amp;gt; import requests&amp;gt;&amp;gt;&amp;gt; r = requests.get(&amp;quot;http://python123.io/ws/demo.html&amp;quot;)&amp;gt;&amp;gt;&amp;gt; r.">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003111747222?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003111805980?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003125633014?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003125726046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003130356706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003130504074?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003130840431?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003131039781?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003131409233?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171003132419274?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-10-09T11:29:23.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiaorui&#39;s blog">
-<meta name="twitter:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta name="twitter:title" content="Python网络爬虫与信息提取(二)：网络爬虫之提取">
+<meta name="twitter:description" content="Beautiful Soup库可对HTML/XML格式进行解析并提取相关信息 安装:  pip install beautifulsoup4 小测： 1234567&amp;gt;&amp;gt;&amp;gt; import requests&amp;gt;&amp;gt;&amp;gt; r = requests.get(&amp;quot;http://python123.io/ws/demo.html&amp;quot;)&amp;gt;&amp;gt;&amp;gt; r.">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20171003111747222?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -120,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://wustxiao.cn/archives/2017/10/"/>
+  <link rel="canonical" href="http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/"/>
 
 
 
 
 
-  <title>归档 | xiaorui's blog</title>
+  <title>Python网络爬虫与信息提取(二)：网络爬虫之提取 | xiaorui's blog</title>
   
 
 
@@ -164,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -332,407 +345,306 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Rui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xiaorui's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Python网络爬虫与信息提取(二)：网络爬虫之提取</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-09T19:28:12+08:00">
+                2017-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/" class="leancloud_visitors" data-flag-title="Python网络爬虫与信息提取(二)：网络爬虫之提取">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/09/Python网络爬虫与信息提取-三-：网络爬虫之实战/" itemprop="url">
-              
-                <span itemprop="name">Python网络爬虫与信息提取(三)：网络爬虫之实战</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-09T19:30:11+08:00"
-              content="2017-10-09" >
-          10-09
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/" itemprop="url">
-              
-                <span itemprop="name">Python网络爬虫与信息提取(二)：网络爬虫之提取</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-09T19:28:12+08:00"
-              content="2017-10-09" >
-          10-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/09/Python网络爬虫与信息提取-一/" itemprop="url">
-              
-                <span itemprop="name">Python网络爬虫与信息提取(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-09T19:24:30+08:00"
-              content="2017-10-09" >
-          10-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/09/markdown新手指南手册/" itemprop="url">
-              
-                <span itemprop="name">markdown新手指南手册</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-09T18:48:18+08:00"
-              content="2017-10-09" >
-          10-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><strong>Beautiful Soup库可对HTML/XML格式进行解析并提取相关信息</strong></p>
+<p>安装:  <code>pip install beautifulsoup4</code></p>
+<p>小测：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt; import requests</div><div class="line">&gt;&gt;&gt; r = requests.get(&quot;http://python123.io/ws/demo.html&quot;)</div><div class="line">&gt;&gt;&gt; r.text</div><div class="line">&gt;&gt;&gt; demo = r.text</div><div class="line">&gt;&gt;&gt; from bs4 import BeautifulSoup</div><div class="line">&gt;&gt;&gt; soup = BeautifulSoup(demo,&quot;html.parser&quot;)</div><div class="line">&gt;&gt;&gt; print(soup.prettify())</div></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20171003111747222?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20171003111805980?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>Beautiful Soup库是解析/遍历/维护”标签熟”的功能库,引用方式:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">from bs4 import BeautifulSoup</div><div class="line">import bs4</div></pre></td></tr></table></figure>
+<p><strong>Beautiful Soup库的4种解析器:</strong></p>
+<p><img src="http://img.blog.csdn.net/20171003125633014?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>Beautiful Soup类的基本元素:</strong></p>
+<p><img src="http://img.blog.csdn.net/20171003125726046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>bs类基本元素</strong></p>
+<ul>
+<li><p>Tag标签<br><img src="http://img.blog.csdn.net/20171003130356706?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>任何存在于HTML语法中的标签都可用**soup.<tag>访问获得,存在多个取第一个</tag></p>
+</li>
+<li><p>Tag的name<br><img src="http://img.blog.csdn.net/20171003130504074?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>每个<tag>有自己的名字,通过<tag>.name获取,字符串类型</tag></tag></p>
+</li>
+<li><p>Tag的attrs<br><img src="http://img.blog.csdn.net/20171003130840431?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+</li>
+<li><p>Tag的NavigableString<br><img src="http://img.blog.csdn.net/20171003131039781?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+</li>
+<li><p>Tag的Comment<br><img src="http://img.blog.csdn.net/20171003131409233?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+</li>
+<li><p>由find_all()扩展的七个方法:<br><img src="http://img.blog.csdn.net/20171003132419274?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+</li>
+</ul>
+<p><strong>实例一:中国大学排名爬虫</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line"># coding=utf-8</div><div class="line">import requests</div><div class="line">from bs4 import BeautifulSoup</div><div class="line">import bs4</div><div class="line"></div><div class="line">def getHTMLText(url):</div><div class="line">    try:</div><div class="line">        r = requests.get(url,timeout=30)</div><div class="line">        r.raise_for_status()</div><div class="line">        r.encoding=r.apparent_encoding</div><div class="line">        return r.text</div><div class="line">    except:</div><div class="line">        return &quot;error&quot;</div><div class="line"></div><div class="line">def fillUnivList(ulist,html):</div><div class="line">    soup=BeautifulSoup(html,&quot;html.parser&quot;)</div><div class="line">    for tr in soup.find(&apos;tbody&apos;).children:</div><div class="line">        if isinstance(tr,bs4.element.Tag):</div><div class="line">            tds = tr(&apos;td&apos;)</div><div class="line">            ulist.append([tds[0].string,tds[1].string,tds[2].string])</div><div class="line"></div><div class="line">def printUnivList(ulist,num):</div><div class="line">    tplt=&quot;&#123;0:^10&#125;\t&#123;1:&#123;3&#125;^10&#125;\t&#123;2:^10&#125;&quot;</div><div class="line">    print(tplt.format(&quot;排名&quot;,&quot;学校名称&quot;,&quot;总分&quot;,chr(12288)))</div><div class="line">    for i in range(num):</div><div class="line">        u=ulist[i]</div><div class="line">        print(tplt.format(u[0],u[1],u[2],chr(12288)))</div><div class="line"></div><div class="line">def main():</div><div class="line">    uinfo=[]</div><div class="line">    url = &quot;http://www.zuihaodaxue.cn/zuihaodaxuepaiming2016.html&quot;</div><div class="line">    html = getHTMLText(url)</div><div class="line">    fillUnivList(uinfo,html)</div><div class="line">    printUnivList(uinfo,20)</div><div class="line">main()</div></pre></td></tr></table></figure>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/06/Hexo-Next主题-文章添加阅读次数，访问量等/" itemprop="url">
-              
-                <span itemprop="name">Hexo+Next主题 文章添加阅读次数，访问量等</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T17:38:07+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/06/markdown-编辑器：-remarkable-安装-ubuntu/" itemprop="url">
-              
-                <span itemprop="name">markdown 编辑器： remarkable 安装(ubuntu)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T16:49:00+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/06/Hexo博客搭建（next主题系列详解）/" itemprop="url">
-              
-                <span itemprop="name">Hexo博客搭建（next主题系列详解）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-06T15:34:50+08:00"
-              content="2017-10-06" >
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/05/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-05T23:22:50+08:00"
-              content="2017-10-05" >
-          10-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/05/Hexo博客使用系列（四）——文章里嵌入音乐播放器/" itemprop="url">
-              
-                <span itemprop="name">Hexo博客使用系列（四）——文章里嵌入音乐播放器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-05T23:04:39+08:00"
-              content="2017-10-05" >
-          10-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/05/Python生成二维码/" itemprop="url">
-              
-                <span itemprop="name">Python/Django生成二维码</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-05T19:00:00+08:00"
-              content="2017-10-05" >
-          10-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信.png" alt="Xiao Rui 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝.png" alt="Xiao Rui 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/支付宝.png" alt="Xiao Rui 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Xiao Rui
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/" title="Python网络爬虫与信息提取(二)：网络爬虫之提取">http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/09/Python网络爬虫与信息提取-一/" rel="next" title="Python网络爬虫与信息提取(一)">
+                <i class="fa fa-chevron-left"></i> Python网络爬虫与信息提取(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/09/Python网络爬虫与信息提取-三-：网络爬虫之实战/" rel="prev" title="Python网络爬虫与信息提取(三)：网络爬虫之实战">
+                Python网络爬虫与信息提取(三)：网络爬虫之实战 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -740,6 +652,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1051,6 +977,10 @@ NexT.Mist</a> v5.1.3</div>
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
@@ -1069,6 +999,18 @@ NexT.Mist</a> v5.1.3</div>
     
 
     
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/';
+          this.page.identifier = '2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/';
+          this.page.title = 'Python网络爬虫与信息提取(二)：网络爬虫之提取';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-xrlrf-github-io.disqus.com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
@@ -1084,6 +1026,10 @@ NexT.Mist</a> v5.1.3</div>
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145975"></script>
+      <!-- UY END -->
     
   
 
