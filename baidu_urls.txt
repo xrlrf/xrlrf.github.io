@@ -1,5 +1,5 @@
+http://wustxiao.cn/2017/10/09/JavaScript入门篇/
 http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-三-：网络爬虫之实战/
 http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-二-：网络爬虫之提取/
 http://wustxiao.cn/2017/10/09/Python网络爬虫与信息提取-一/
 http://wustxiao.cn/2017/10/09/markdown新手指南手册/
-http://wustxiao.cn/2017/10/06/Hexo-Next主题-文章添加阅读次数，访问量等/
