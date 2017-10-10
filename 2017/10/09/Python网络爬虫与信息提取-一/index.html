@@ -45,6 +45,50 @@
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
@@ -93,7 +137,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20171003091835125?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171003092400462?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171003094035525?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-09T11:25:45.988Z">
+<meta property="og:updated_time" content="2017-10-10T11:15:36.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python网络爬虫与信息提取(一)">
 <meta name="twitter:description" content="Requests库的七个主要方法:  get方法 r = requests.get(url):右边构造一个向服务器请求资源的Requests对象,左边返回一个包含服务器资源的Response对象给r 完整参数:requests.get(url,params=None,**kwargs),实则由request方法封装 Response对象的五个属性:  爬取网页的通用代码框架 Requests库爬取">
@@ -481,7 +525,7 @@
 6种常见异常：
 </code></pre><p><img src="http://img.blog.csdn.net/20171003092400462?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
 <p><strong>使用r.raise_for_status()方法构建通用代码框架:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line"># coding=utf-8</div><div class="line">def getHTMLText(url)</div><div class="line">try:</div><div class="line">	r = request.get(url,timeout = 30)</div><div class="line">	r.raise_for_status()</div><div class="line">	r.encoding = r.apparent_encoding</div><div class="line">	return r.text</div><div class="line">except:</div><div class="line">	return &quot;产生异常&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment"># coding=utf-8</span></div><div class="line">def getHTMLText(url)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">	r = request.<span class="keyword">get</span>(url,<span class="keyword">timeout</span> = <span class="number">30</span>)</div><div class="line">	r.raise_for_status()</div><div class="line">	r.encoding = r.apparent_encoding</div><div class="line"><span class="built_in">	return</span> r.<span class="built_in">text</span></div><div class="line">except:</div><div class="line"><span class="built_in">	return</span> <span class="string">"产生异常"</span></div></pre></td></tr></table></figure>
 <p><strong>HTTP协议对资源的操作:</strong></p>
 <p><img src="http://img.blog.csdn.net/20171003094035525?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
 <p><strong>Requests库主要方法:requests.request(method,url,</strong>kwargs)**</p>
@@ -493,23 +537,54 @@
 <ul>
 <li>京东商品页面的爬取</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">url = &quot;http://item.jd.com/2967929.html&quot;</div><div class="line">try:</div><div class="line">    r=requests.get(url)</div><div class="line">    r.raise_for_status()</div><div class="line">    r.encoding=r.apparent_encoding</div><div class="line">    print(r.text[:1000])</div><div class="line">except:</div><div class="line">    print(&quot;爬取失败&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">url = <span class="string">"http://item.jd.com/2967929.html"</span></div><div class="line">try:</div><div class="line">    <span class="attribute">r</span>=requests.get(url)</div><div class="line">    r.raise_for_status()</div><div class="line">    r.<span class="attribute">encoding</span>=r.apparent_encoding</div><div class="line">    <span class="builtin-name">print</span>(r.text[:1000])</div><div class="line">except:</div><div class="line">    <span class="builtin-name">print</span>(<span class="string">"爬取失败"</span>)</div></pre></td></tr></table></figure>
 <ul>
 <li>亚马逊商品页面的爬取<br>由于亚马逊有自身的头部审查,故我们模拟浏览器访问:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">url = &quot;http://www.amazon.cn/gp/product/B01M8L5Z3Y&quot;</div><div class="line">try:</div><div class="line">    kv = &#123;&apos;user-agent&apos;:&apos;Mozilla/5.0&apos;&#125;</div><div class="line">    r= requests.get(url,headers = kv)</div><div class="line">    r.raise_for_status()</div><div class="line">    r.encoding=r.apparent_encoding</div><div class="line">    print(r.text[1000:2000])</div><div class="line">except:</div><div class="line">    print(&quot;爬取失败&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">url = <span class="string">"http://www.amazon.cn/gp/product/B01M8L5Z3Y"</span></div><div class="line"><span class="built_in">try</span>:</div><div class="line">    kv = &#123;<span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0'</span>&#125;</div><div class="line">    r= requests.<span class="built_in">get</span>(url,headers = kv)</div><div class="line">    r.raise_for_status()</div><div class="line">    r.encoding=r.apparent_encoding</div><div class="line">    <span class="built_in">print</span>(r.<span class="built_in">text</span>[<span class="number">1000</span>:<span class="number">2000</span>])</div><div class="line">except:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"爬取失败"</span>)</div></pre></td></tr></table></figure>
 <ul>
 <li>百度/360搜索关键词提交<br>首先我们需要知道搜索关键词的提交接口:<br>百度:<a href="http://www.baidu.com/s?wd=keyword" target="_blank" rel="external">http://www.baidu.com/s?wd=keyword</a><br>360:<a href="http://www.so.com/s?q=keyword" target="_blank" rel="external">http://www.so.com/s?q=keyword</a><br>接下来我们可以利用params参数将关键词加入,代码如下:</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">keyword = &quot;Python&quot;</div><div class="line">try:</div><div class="line">    kv = &#123;&apos;wd&apos;:keyword&#125;</div><div class="line">    r= requests.get(&quot;http://www.baidu.com/s&quot;,params = kv)</div><div class="line">    print(r.request.url)</div><div class="line">    r.raise_for_status()</div><div class="line">    print(len(r.text))</div><div class="line">except:</div><div class="line">    print(&quot;爬取失败&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">keyword = <span class="string">"Python"</span></div><div class="line"><span class="built_in">try</span>:</div><div class="line">    kv = &#123;<span class="string">'wd'</span>:keyword&#125;</div><div class="line">    r= requests.<span class="built_in">get</span>(<span class="string">"http://www.baidu.com/s"</span>,params = kv)</div><div class="line">    <span class="built_in">print</span>(r.request.url)</div><div class="line">    r.raise_for_status()</div><div class="line">    <span class="built_in">print</span>(len(r.<span class="built_in">text</span>))</div><div class="line">except:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"爬取失败"</span>)</div></pre></td></tr></table></figure>
 <ul>
 <li>网络图片的爬取和存储</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line"># coding=utf-8</div><div class="line">import requests</div><div class="line">import os</div><div class="line">url = &quot;http://image.nationalgeographic.com.cn/2017/0311/20170311024522382.jpg&quot;</div><div class="line"></div><div class="line">root = &quot;/home/xiaorui/文档/Python/&quot;</div><div class="line">path = root +url.split(&apos;/&apos;)[-1]</div><div class="line">try:</div><div class="line">    if not os.path.exists(root):</div><div class="line">        os.mkdir(root)</div><div class="line">    if not os.path.exists(path):</div><div class="line">        r=requests.get(url)</div><div class="line">        with open(path,&apos;wb&apos;) as f:</div><div class="line">            f.write(r.content)</div><div class="line">            f.close()</div><div class="line">            print(&quot;文件保存成功&quot;)</div><div class="line">    else:</div><div class="line">        print(&quot;文件已存在&quot;)</div><div class="line">except:</div><div class="line">    print(&quot;爬取失败&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line"># coding=utf<span class="number">-8</span></div><div class="line">import requests</div><div class="line">import <span class="built_in">os</span></div><div class="line">url = <span class="string">"http://image.nationalgeographic.com.cn/2017/0311/20170311024522382.jpg"</span></div><div class="line"></div><div class="line">root = <span class="string">"/home/xiaorui/文档/Python/"</span></div><div class="line"><span class="built_in">path</span> = root +url.split(<span class="string">'/'</span>)[<span class="number">-1</span>]</div><div class="line">try:</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">os</span>.<span class="built_in">path</span>.exists(root):</div><div class="line">        <span class="built_in">os</span>.mkdir(root)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">os</span>.<span class="built_in">path</span>.exists(<span class="built_in">path</span>):</div><div class="line">        r=requests.get(url)</div><div class="line">        with <span class="built_in">open</span>(<span class="built_in">path</span>,<span class="string">'wb'</span>) as f:</div><div class="line">            f.<span class="built_in">write</span>(r.content)</div><div class="line">            f.<span class="built_in">close</span>()</div><div class="line">            <span class="built_in">print</span>(<span class="string">"文件保存成功"</span>)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="built_in">print</span>(<span class="string">"文件已存在"</span>)</div><div class="line">except:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"爬取失败"</span>)</div></pre></td></tr></table></figure>
 <ul>
 <li>IP地址归属地的查询</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line"># coding=utf-8</div><div class="line">import requests</div><div class="line">url = &quot;http://m.ip138.com/ip.asp?ip=&quot;</div><div class="line">try:</div><div class="line">    r=requests.get(url+&apos;202.204.80.112&apos;)</div><div class="line">    r.raise_for_status()</div><div class="line">    r.encoding=r.apparent_encoding</div><div class="line">    print(r.text[-500:])</div><div class="line">except:</div><div class="line">    print(&quot;爬取失败&quot;)</div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment"># coding=utf-8</span></div><div class="line">import requests</div><div class="line">url = <span class="string">"http://m.ip138.com/ip.asp?ip="</span></div><div class="line">try:</div><div class="line">    <span class="attribute">r</span>=requests.get(url+'202.204.80.112')</div><div class="line">    r.raise_for_status()</div><div class="line">    r.<span class="attribute">encoding</span>=r.apparent_encoding</div><div class="line">    <span class="builtin-name">print</span>(r.text[-500:])</div><div class="line">except:</div><div class="line">    <span class="builtin-name">print</span>(<span class="string">"爬取失败"</span>)</div></pre></td></tr></table></figure>
+<p><div id="disqus_thread"></div></p>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-xrlrf-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="external">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//https-xrlrf-github-io.disqus.com/count.js" async></script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107582762-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107582762-1');
+</script>
+
+
+<!-- UY BEGIN -->
+<p><div id="uyan_frame"></div></p>
+<p><script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145975"></script><br><!-- UY END --></p>
 
       
     </div>
@@ -712,7 +787,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -723,7 +798,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -734,7 +809,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -840,7 +915,7 @@ var todayDate = today.getDate()
 var todayHour = today.getHours()
 var todayMinute = today.getMinutes()
 var todaySecond = today.getSeconds()
-var t1 = Date.UTC(2014,0,14,11,19,00)
+var t1 = Date.UTC(2017,0,14,11,19,00)
 var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
 var diff = t2-t1
 
