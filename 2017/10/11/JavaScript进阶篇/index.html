@@ -489,9 +489,9 @@
 
       
         <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>创建数组语法：</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="type">Array</span>();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
 <p>我们创建数组的同时，还可以为数组指定长度，长度可任意指定。</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray= <span class="keyword">new</span> <span class="type">Array</span>(<span class="number">8</span>); <span class="comment">//创建数组，存储8个数据。</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">8</span>); <span class="comment">//创建数组，存储8个数据。</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>注意：</strong><br>1.创建的新数组是空数组，没有值，如输出，则显示undefined。<br>2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。</p>
 </blockquote>
@@ -518,7 +518,7 @@
 <p>数组随元素的增加，长度也会改变，如下:</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr=[<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>]; <span class="comment">// 包含5个数值的数组</span></div><div class="line">document.write(arr.length); <span class="comment">//显示数组的长度5</span></div><div class="line">arr[<span class="number">15</span>]=<span class="number">34</span>;  <span class="comment">//增加元素，使用索引为15,赋值为34</span></div><div class="line">alert(arr.length); <span class="comment">//显示数组的长度16</span></div></pre></td></tr></table></figure>
 <p>1.二维数组的定义方法一</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarr=<span class="keyword">new</span> <span class="type">Array</span>();  <span class="comment">//先声明一维</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;   <span class="comment">//一维长度为2</span></div><div class="line">   myarr[i]=<span class="keyword">new</span> <span class="type">Array</span>();  <span class="comment">//再声明二维</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;   <span class="comment">//二维长度为3</span></div><div class="line">   myarr[i][j]=i+j;   <span class="comment">// 赋值，每个数组元素的值为i+j</span></div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarr=<span class="keyword">new</span> <span class="built_in">Array</span>();  <span class="comment">//先声明一维</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;   <span class="comment">//一维长度为2</span></div><div class="line">   myarr[i]=<span class="keyword">new</span> <span class="built_in">Array</span>();  <span class="comment">//再声明二维</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;   <span class="comment">//二维长度为3</span></div><div class="line">   myarr[i][j]=i+j;   <span class="comment">// 赋值，每个数组元素的值为i+j</span></div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>2.二维数组的定义方法二</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var Myarr = [[<span class="number">0</span> , <span class="number">1</span> , <span class="number">2</span> ],[<span class="number">1</span> , <span class="number">2</span> , <span class="number">3</span>]]</div></pre></td></tr></table></figure>
 <p>3.赋值</p>
@@ -571,26 +571,26 @@
 <p>对象的属性：反映该对象某些特定的性质的，如：字符串的长度、图像的长宽等；</p>
 <p>对象的方法：能够在对象上执行的动作。例如，表单的“提交”(Submit)，时间的“获取”(getYear)等；</p>
 <p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等，使用对象前先定义，如下使用数组对象：</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> objectName =<span class="keyword">new</span> <span class="type">Array</span>();<span class="comment">//使用new关键字定义对象</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> objectName =<span class="keyword">new</span> <span class="built_in">Array</span>();<span class="comment">//使用new关键字定义对象</span></div></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var objectName</span> =[];</div></pre></td></tr></table></figure>
 <p>访问对象属性的语法:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">objectName</span><span class="selector-class">.propertyName</span></div></pre></td></tr></table></figure>
 <p>如使用 Array 对象的 length 属性来获得数组的长度：</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="type">Array</span>(<span class="number">6</span>);<span class="comment">//定义数组对象</span></div><div class="line"><span class="keyword">var</span> myl=myarray.length;<span class="comment">//访问数组长度length属性</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">6</span>);<span class="comment">//定义数组对象</span></div><div class="line"><span class="keyword">var</span> myl=myarray.length;<span class="comment">//访问数组长度length属性</span></div></pre></td></tr></table></figure>
 <p>以上代码执行后，myl的值将是：6</p>
 <p>访问对象的方法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">objectName</span><span class="selector-class">.methodName</span>()</div></pre></td></tr></table></figure>
 <p>如使用string 对象的 toUpperCase() 方法来将文本转换为大写：</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mystr=<span class="string">"Hello world!"</span>;<span class="comment">//创建一个字符串</span></div><div class="line"><span class="keyword">var</span> request=mystr.toUpperCase(); <span class="comment">//使用字符串对象方法</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mystr=<span class="string">"Hello world!"</span>;<span class="comment">//创建一个字符串</span></div><div class="line"><span class="keyword">var</span> request=mystr.toUpperCase(); <span class="comment">//使用字符串对象方法</span></div></pre></td></tr></table></figure>
 <p>以上代码执行后，request的值是：HELLO WORLD!</p>
 <h4 id="Date-日期对象"><a href="#Date-日期对象" class="headerlink" title="Date 日期对象"></a>Date 日期对象</h4><p>日期对象可以储存任意一个日期，并且可以精确到毫秒数（1/1000 秒）。</p>
 <p>定义一个时间对象 :</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Udate=<span class="keyword">new</span> <span class="type">Date</span>();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Udate=<span class="keyword">new</span> <span class="built_in">Date</span>();</div></pre></td></tr></table></figure>
 <p>注意:使用关键字new，Date()的首字母必须大写。</p>
 <p>使 Udate 成为日期对象，并且已有初始值：当前时间(当前电脑系统时间)。</p>
 <p>如果要自定义初始值，可以用以下方法：</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="type">Date</span>(<span class="number">2012</span>, <span class="number">10</span>, <span class="number">1</span>);  <span class="comment">//2012年10月1日</span></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="type">Date</span>(<span class="string">'Oct 1, 2012'</span>); <span class="comment">//2012年10月1日</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2012</span>, <span class="number">10</span>, <span class="number">1</span>);  <span class="comment">//2012年10月1日</span></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'Oct 1, 2012'</span>); <span class="comment">//2012年10月1日</span></div></pre></td></tr></table></figure>
 <p>我们最好使用下面介绍的“方法”来严格定义时间。</p>
 <p>访问方法语法：“&lt;日期对象&gt;.&lt;方法&gt;”</p>
 <p>Date对象中处理时间和日期的常用方法：</p>
@@ -1012,7 +1012,7 @@ siteTime()
 </script>
 
 
-
+<!--
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="http://hexo.io" rel="external nofollow">Hexo</a> 强力驱动</div>
 
 
@@ -1025,7 +1025,7 @@ siteTime()
 NexT.Mist</a> v5.1.3</div>
 
 
-
+-->
 
         
 <div class="busuanzi-count">
