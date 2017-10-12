@@ -134,7 +134,9 @@
 <meta property="og:description" content="数组创建数组语法： 1var myarray=new Array(); 我们创建数组的同时，还可以为数组指定长度，长度可任意指定。 1var myarray= new Array(8); //创建数组，存储8个数据。  注意：1.创建的新数组是空数组，没有值，如输出，则显示undefined。2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20171011212616208?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-11T13:40:10.927Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20171012140547937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171012143314237?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-10-12T08:04:26.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript进阶篇">
 <meta name="twitter:description" content="数组创建数组语法： 1var myarray=new Array(); 我们创建数组的同时，还可以为数组指定长度，长度可任意指定。 1var myarray= new Array(8); //创建数组，存储8个数据。  注意：1.创建的新数组是空数组，没有值，如输出，则显示undefined。2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规">
@@ -489,9 +491,9 @@
 
       
         <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>创建数组语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="built_in">Array</span>();</div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="type">Array</span>();</div></pre></td></tr></table></figure>
 <p>我们创建数组的同时，还可以为数组指定长度，长度可任意指定。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">8</span>); <span class="comment">//创建数组，存储8个数据。</span></div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray= <span class="keyword">new</span> <span class="type">Array</span>(<span class="number">8</span>); <span class="comment">//创建数组，存储8个数据。</span></div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>注意：</strong><br>1.创建的新数组是空数组，没有值，如输出，则显示undefined。<br>2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规定长度以外。</p>
 </blockquote>
@@ -518,7 +520,7 @@
 <p>数组随元素的增加，长度也会改变，如下:</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr=[<span class="number">98</span>,<span class="number">76</span>,<span class="number">54</span>,<span class="number">56</span>,<span class="number">76</span>]; <span class="comment">// 包含5个数值的数组</span></div><div class="line">document.write(arr.length); <span class="comment">//显示数组的长度5</span></div><div class="line">arr[<span class="number">15</span>]=<span class="number">34</span>;  <span class="comment">//增加元素，使用索引为15,赋值为34</span></div><div class="line">alert(arr.length); <span class="comment">//显示数组的长度16</span></div></pre></td></tr></table></figure>
 <p>1.二维数组的定义方法一</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarr=<span class="keyword">new</span> <span class="built_in">Array</span>();  <span class="comment">//先声明一维</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;   <span class="comment">//一维长度为2</span></div><div class="line">   myarr[i]=<span class="keyword">new</span> <span class="built_in">Array</span>();  <span class="comment">//再声明二维</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;   <span class="comment">//二维长度为3</span></div><div class="line">   myarr[i][j]=i+j;   <span class="comment">// 赋值，每个数组元素的值为i+j</span></div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarr=<span class="keyword">new</span> <span class="type">Array</span>();  <span class="comment">//先声明一维</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;   <span class="comment">//一维长度为2</span></div><div class="line">   myarr[i]=<span class="keyword">new</span> <span class="type">Array</span>();  <span class="comment">//再声明二维</span></div><div class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">3</span>;j++)&#123;   <span class="comment">//二维长度为3</span></div><div class="line">   myarr[i][j]=i+j;   <span class="comment">// 赋值，每个数组元素的值为i+j</span></div><div class="line">   &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <p>2.二维数组的定义方法二</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var Myarr = [[<span class="number">0</span> , <span class="number">1</span> , <span class="number">2</span> ],[<span class="number">1</span> , <span class="number">2</span> , <span class="number">3</span>]]</div></pre></td></tr></table></figure>
 <p>3.赋值</p>
@@ -567,30 +569,33 @@
 <p>注意：不同浏览器对onunload事件支持不同。</p>
 <p>如下代码,当退出页面时，弹出对话框“您确定离开该网页吗？”。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>onunload<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">		<span class="built_in">window</span>.onunload = onunload_message();</span></div><div class="line"><span class="actionscript">		<span class="function"><span class="keyword">function</span> <span class="title">onunload_message</span><span class="params">()</span></span>&#123;</span></div><div class="line"><span class="actionscript">			alert(<span class="string">"您确定离开该网页吗？"</span>);</span></div><div class="line"><span class="undefined">		&#125;</span></div><div class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">欢迎学习JavaScript.</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>卸载事件</p>
+</blockquote>
 <h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><h4 id="什么是对象"><a href="#什么是对象" class="headerlink" title="什么是对象"></a>什么是对象</h4><p>JavaScript 中的所有事物都是对象，如:字符串、数值、数组、函数等，每个对象带有属性和方法。</p>
 <p>对象的属性：反映该对象某些特定的性质的，如：字符串的长度、图像的长宽等；</p>
 <p>对象的方法：能够在对象上执行的动作。例如，表单的“提交”(Submit)，时间的“获取”(getYear)等；</p>
 <p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等，使用对象前先定义，如下使用数组对象：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> objectName =<span class="keyword">new</span> <span class="built_in">Array</span>();<span class="comment">//使用new关键字定义对象</span></div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> objectName =<span class="keyword">new</span> <span class="type">Array</span>();<span class="comment">//使用new关键字定义对象</span></div></pre></td></tr></table></figure>
 <p>或者</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var objectName</span> =[];</div></pre></td></tr></table></figure>
 <p>访问对象属性的语法:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">objectName</span><span class="selector-class">.propertyName</span></div></pre></td></tr></table></figure>
 <p>如使用 Array 对象的 length 属性来获得数组的长度：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">6</span>);<span class="comment">//定义数组对象</span></div><div class="line"><span class="keyword">var</span> myl=myarray.length;<span class="comment">//访问数组长度length属性</span></div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myarray=<span class="keyword">new</span> <span class="type">Array</span>(<span class="number">6</span>);<span class="comment">//定义数组对象</span></div><div class="line"><span class="keyword">var</span> myl=myarray.length;<span class="comment">//访问数组长度length属性</span></div></pre></td></tr></table></figure>
 <p>以上代码执行后，myl的值将是：6</p>
 <p>访问对象的方法：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">objectName</span><span class="selector-class">.methodName</span>()</div></pre></td></tr></table></figure>
 <p>如使用string 对象的 toUpperCase() 方法来将文本转换为大写：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mystr=<span class="string">"Hello world!"</span>;<span class="comment">//创建一个字符串</span></div><div class="line"><span class="keyword">var</span> request=mystr.toUpperCase(); <span class="comment">//使用字符串对象方法</span></div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mystr=<span class="string">"Hello world!"</span>;<span class="comment">//创建一个字符串</span></div><div class="line"><span class="keyword">var</span> request=mystr.toUpperCase(); <span class="comment">//使用字符串对象方法</span></div></pre></td></tr></table></figure>
 <p>以上代码执行后，request的值是：HELLO WORLD!</p>
 <h4 id="Date-日期对象"><a href="#Date-日期对象" class="headerlink" title="Date 日期对象"></a>Date 日期对象</h4><p>日期对象可以储存任意一个日期，并且可以精确到毫秒数（1/1000 秒）。</p>
 <p>定义一个时间对象 :</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Udate=<span class="keyword">new</span> <span class="built_in">Date</span>();</div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Udate=<span class="keyword">new</span> <span class="type">Date</span>();</div></pre></td></tr></table></figure>
 <p>注意:使用关键字new，Date()的首字母必须大写。</p>
 <p>使 Udate 成为日期对象，并且已有初始值：当前时间(当前电脑系统时间)。</p>
 <p>如果要自定义初始值，可以用以下方法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2012</span>, <span class="number">10</span>, <span class="number">1</span>);  <span class="comment">//2012年10月1日</span></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'Oct 1, 2012'</span>); <span class="comment">//2012年10月1日</span></div></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="type">Date</span>(<span class="number">2012</span>, <span class="number">10</span>, <span class="number">1</span>);  <span class="comment">//2012年10月1日</span></div><div class="line"><span class="keyword">var</span> d = <span class="keyword">new</span> <span class="type">Date</span>(<span class="string">'Oct 1, 2012'</span>); <span class="comment">//2012年10月1日</span></div></pre></td></tr></table></figure>
 <p>我们最好使用下面介绍的“方法”来严格定义时间。</p>
 <p>访问方法语法：“&lt;日期对象&gt;.&lt;方法&gt;”</p>
 <p>Date对象中处理时间和日期的常用方法：</p>
@@ -615,6 +620,424 @@
 <li>时间推迟 1 小时,就是: “x.setTime(x.getTime() + 60 <em> 60 </em> 1000);”</li>
 </ol>
 </blockquote>
+<h4 id="String-字符串对象"><a href="#String-字符串对象" class="headerlink" title="String 字符串对象"></a>String 字符串对象</h4><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>charAt()</td>
+<td>返回指定位置的字符</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>返回指定字符首次出现的位置</td>
+</tr>
+<tr>
+<td>split()</td>
+<td>字符串分割</td>
+</tr>
+<tr>
+<td>substring()</td>
+<td>提取字符串</td>
+</tr>
+<tr>
+<td>substr()</td>
+<td>提取指定数目的字符串</td>
+</tr>
+</tbody>
+</table>
+<pre><code>1.访问字符串对象的属性length:
+</code></pre><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var mystr</span>=<span class="string">"Hello World!"</span>;</div><div class="line"><span class="attribute">var myl</span>=mystr.length;</div></pre></td></tr></table></figure>
+<p>以上代码执行后，myl 的值将是：12</p>
+<pre><code>2.访问字符串对象的方法：
+</code></pre><p>使用 String 对象的 toUpperCase() 方法来将字符串小写字母转换为大写：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">var mystr</span>=<span class="string">"Hello world!"</span>;</div><div class="line"><span class="attribute">var mynum</span>=mystr.toUpperCase();</div></pre></td></tr></table></figure>
+<p>以上代码执行后，mynum 的值是：HELLO WORLD!</p>
+<h4 id="返回指定位置的字符charAt"><a href="#返回指定位置的字符charAt" class="headerlink" title="返回指定位置的字符charAt"></a>返回指定位置的字符charAt</h4><p>charAt() 方法可返回指定位置的字符。返回的字符是长度为 1 的字符串。</p>
+<p>语法:<br><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.charAt(<span class="keyword">index</span>)</div></pre></td></tr></table></figure></p>
+<p>参数说明：</p>
+<blockquote>
+<p>注意：1.字符串中第一个字符的下标是 0。最后一个字符的下标为字符串长度减一（string.length-1）。</p>
+<p>2.如果参数 index 不在 0 与 string.length-1 之间，该方法将返回一个空字符串。</p>
+</blockquote>
+<p>如:在字符串 “I love JavaScript!” 中，返回位置2的字符：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">  <span class="keyword">var</span> mystr=<span class="string">"I love JavaScript!"</span></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mystr.charAt(<span class="number">2</span>));</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>注意：一个空格也算一个字符。</strong></p>
+<h4 id="返回指定的字符串首次出现的位置-indexOf"><a href="#返回指定的字符串首次出现的位置-indexOf" class="headerlink" title="返回指定的字符串首次出现的位置(indexOf)"></a>返回指定的字符串首次出现的位置(indexOf)</h4><pre><code>indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+</code></pre><p>语法</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">stringObject.indexOf(substring, </span>startpos)</div></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<blockquote>
+<p>说明：</p>
+<p>1.该方法将从头到尾地检索字符串 stringObject，看它是否含有子串 substring。</p>
+<p>2.可选参数，从stringObject的startpos位置开始查找substring，如果没有此参数将从stringObject的开始位置查找。</p>
+<p>3.如果找到一个 substring，则返回 substring 的第一次出现的位置。stringObject 中的字符位置是从 0 开始的。</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<ol>
+<li>indexOf() 方法区分大小写。</li>
+<li>如果要检索的字符串值没有出现，则该方法返回 -1。</li>
+</ol>
+<p>例如: 对 “I love JavaScript!” 字符串内进行不同的检索：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">  <span class="keyword">var</span> str=<span class="string">"I love JavaScript!"</span></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(str.indexOf(<span class="string">"I"</span>) + <span class="string">"&lt;br /&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(str.indexOf(<span class="string">"v"</span>) + <span class="string">"&lt;br /&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(str.indexOf(<span class="string">"v"</span>,<span class="number">8</span>));</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>以上代码的输出：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">0</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">9</span></div></pre></td></tr></table></figure>
+<h4 id="字符串分割split"><a href="#字符串分割split" class="headerlink" title="字符串分割split()"></a>字符串分割split()</h4><p>知识讲解：</p>
+<p>split() 方法将字符串分割为字符串数组，并返回此数组。</p>
+<p>语法：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.<span class="built_in">split</span>(separator,<span class="built_in">limit</span>)</div></pre></td></tr></table></figure>
+<p>参数说明:<br><img src="http://img.blog.csdn.net/20171012140547937?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>注意：如果把空字符串 (“”) 用作 separator，那么 stringObject 中的每个字符之间都会被分割。</strong></p>
+<pre><code>我们将按照不同的方式来分割字符串：
+</code></pre><p>使用指定符号分割字符串，代码如下:</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> mystr = <span class="string">"www.imooc.com"</span>;</div><div class="line"><span class="built_in">document</span>.write(mystr.split(<span class="string">"."</span>)+<span class="string">"&lt;br&gt;"</span>);</div><div class="line"><span class="built_in">document</span>.write(mystr.split(<span class="string">"."</span>, <span class="number">2</span>)+<span class="string">"&lt;br&gt;"</span>);</div></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">www,</span>imooc,com</div><div class="line"><span class="built_in">www,</span>imooc</div></pre></td></tr></table></figure>
+<p>将字符串分割为字符，代码如下：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.<span class="built_in">write</span>(mystr.split(<span class="string">""</span>)+<span class="string">"&lt;br&gt;"</span>);</div><div class="line">document.<span class="built_in">write</span>(mystr.split(<span class="string">""</span>, <span class="number">5</span>));</div></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">w,</span>w,w,.,i,m,o,o,c,.,c,o,m</div><div class="line"><span class="built_in">w,</span>w,w,.,i</div></pre></td></tr></table></figure>
+<h4 id="提取字符串substring"><a href="#提取字符串substring" class="headerlink" title="提取字符串substring()"></a>提取字符串substring()</h4><p>substring用于提取字符串中介于两个指定下标之间的字符</p>
+<p>语法：</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substring(startP<span class="keyword">os</span>,stopP<span class="keyword">os</span>)</div></pre></td></tr></table></figure>
+<p>参数说明</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startPos</td>
+<td>必需。一个非负的整数，开始位置</td>
+</tr>
+<tr>
+<td>stopPos</td>
+<td>可选。一个非负的整数，结束位置，如果省略该参数，那么返回的子串会一直到字符串对象的结尾。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：</p>
+<ol>
+<li><p>返回的内容是从 start开始(包含start位置的字符)到 stop-1 处的所有字符，其长度为 stop 减start。</p>
+</li>
+<li><p>如果参数 start 与 stop 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。</p>
+</li>
+<li><p>如果 start 比 stop 大，那么该方法在提取子串之前会先交换这两个参数。</p>
+</li>
+</ol>
+</blockquote>
+<p>使用 substring() 从字符串中提取字符串，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">  <span class="keyword">var</span> mystr=<span class="string">"I love JavaScript"</span>;</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mystr.substring(<span class="number">7</span>));</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mystr.substring(<span class="number">2</span>,<span class="number">6</span>));</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">JavaScript</span></div><div class="line"><span class="attribute">love</span></div></pre></td></tr></table></figure>
+<h4 id="提取指定数目的字符substr"><a href="#提取指定数目的字符substr" class="headerlink" title="提取指定数目的字符substr()"></a>提取指定数目的字符substr()</h4><p>substr() 方法从字符串中提取从 startPos位置开始的指定数目的字符串。</p>
+<p>语法:</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stringObject.substr(startPos,<span class="built_in">length</span>)</div></pre></td></tr></table></figure>
+<p>参数说明:<br><img src="http://img.blog.csdn.net/20171012143314237?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<blockquote>
+<p>注意：如果参数startPos是负数，从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2<br>指倒数第二个字符，以此类推。</p>
+<p>如果startPos为负数且绝对值大于字符串长度，startPos为0。</p>
+</blockquote>
+<p>使用 substr() 从字符串中提取一些字符，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">  <span class="keyword">var</span> mystr=<span class="string">"I love JavaScript!"</span>;</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mystr.substr(<span class="number">7</span>));</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mystr.substr(<span class="number">2</span>,<span class="number">4</span>));</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JavaScript!</div><div class="line">love</div></pre></td></tr></table></figure>
+<h4 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h4><p>Math对象，提供对数据的数学计算。</p>
+<p>使用 Math 的属性和方法，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> mypi=<span class="built_in">Math</span>.PI;</span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> myabs=<span class="built_in">Math</span>.abs(<span class="number">-15</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mypi);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myabs);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">3.141592653589793</span></div><div class="line"><span class="number">15</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：Math 对象是一个固有的对象，无需创建它，直接把 Math<br>作为对象使用就可以调用其所有属性和方法。这是它与Date,String对象的区别。</p>
+</blockquote>
+<p>Math 对象属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E</td>
+<td>返回算数常量e,即自然对数的底数（约等于2.718…）</td>
+</tr>
+<tr>
+<td>LN2</td>
+<td>返回２的自然对数（约等于０.693）</td>
+</tr>
+<tr>
+<td>LN10</td>
+<td>返回１０的自然对数（约等于2.302）｜</td>
+</tr>
+<tr>
+<td>LOG2E</td>
+<td>返回以２为底的e的对数（约等于1.442）</td>
+</tr>
+<tr>
+<td>LOG10E</td>
+<td>返回以１０为底的e的对数（约等于0.434）</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>返回圆周率 (约等于3.14159)</td>
+</tr>
+<tr>
+<td>SQRT1_2</td>
+<td>返回２的平方根的倒数（约等于0.707）</td>
+</tr>
+<tr>
+<td>SQRT2</td>
+<td>返回2的平方根（约等于1.414）｜</td>
+</tr>
+</tbody>
+</table>
+<p>Math 对象方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abs(x)</td>
+<td>返回数的绝对值</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>返回数的反余弦值</td>
+</tr>
+<tr>
+<td>asin(x)</td>
+<td>返回数的反正弦值</td>
+</tr>
+<tr>
+<td>atan(x)</td>
+<td>返回数的反正切值</td>
+</tr>
+<tr>
+<td>atan2(y,x)</td>
+<td>返回由x轴到点(x,y)的角度（以弧度为单位）</td>
+</tr>
+<tr>
+<td>ceil(x)</td>
+<td>对数进行上舍入</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>返回数的余弦</td>
+</tr>
+<tr>
+<td>exp(x)</td>
+<td>返回e的指数</td>
+</tr>
+<tr>
+<td>floor(x)</td>
+<td>对数进行下舍入</td>
+</tr>
+<tr>
+<td>log(x)</td>
+<td>返回数的自然对数（底为e）</td>
+</tr>
+<tr>
+<td>max(x,y)</td>
+<td>返回x和y的最大值</td>
+</tr>
+<tr>
+<td>min(x,y)</td>
+<td>返回x和y的最小值</td>
+</tr>
+<tr>
+<td>pow(x,y)</td>
+<td>返回x的y次幂</td>
+</tr>
+<tr>
+<td>random()</td>
+<td>返回０～１之间的随机数</td>
+</tr>
+<tr>
+<td>round(x)</td>
+<td>把数四舍五入为最接近的整数</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>返回数的正弦</td>
+</tr>
+<tr>
+<td>sqrt()</td>
+<td>返回数的平方根</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>返回角的正切</td>
+</tr>
+<tr>
+<td>toSource()</td>
+<td>返回该对象的源代码</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>返回Math对象的原始值</td>
+</tr>
+</tbody>
+</table>
+<p>向上取整ceil()<br>ceil() 方法可对一个数进行向上取整。</p>
+<p>语法:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Math.<span class="built_in">ceil</span>(x)</div></pre></td></tr></table></figure></p>
+<p>参数说明:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>必需，必须是一个数值</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：它返回的是大于或等于x，并且与x最接近的整数。</strong></p>
+<p>我们将把 ceil() 方法运用到不同的数字上，代码<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">0.8</span>) + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">6.3</span>) + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">5</span>) + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">3.5</span>) + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">-5.1</span>) + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.ceil(<span class="number">-5.9</span>))</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span></div><div class="line"><span class="number">7</span></div><div class="line"><span class="number">5</span></div><div class="line"><span class="number">4</span></div><div class="line"><span class="number">-5</span></div><div class="line"><span class="number">-5</span></div></pre></td></tr></table></figure></p>
+<h4 id="随机数-random"><a href="#随机数-random" class="headerlink" title="随机数 random()"></a>随机数 random()</h4><p>random() 方法可返回介于 0 ~ 1（大于或等于 0 但小于 1 )之间的一个随机数。<br>语法：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Math.random()<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>注意：返回一个大于或等于 0 但小于 1 的符号为正的数字值。</p>
+<p>我们取得介于 0 到 1 之间的一个随机数，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(<span class="built_in">Math</span>.random());</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">0<span class="selector-class">.190305486195328</span></div></pre></td></tr></table></figure>
+<p>注意:因为是随机数，所以每次运行结果不一样，但是0 ~ 1的数值。<br>获得0 ~ 10之间的随机数，代码如下:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write((<span class="built_in">Math</span>.random())*<span class="number">10</span>);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">8<span class="selector-class">.72153625893887</span></div></pre></td></tr></table></figure>
+<h4 id="Array-数组对象"><a href="#Array-数组对象" class="headerlink" title="Array 数组对象"></a>Array 数组对象</h4><p>数组对象是一个对象的集合，里边的对象可以是不同类型的。数组的每一个成员对象都有一个“下标”，用来表示它在数组中的位置，是从零开始的</p>
+<p>数组定义的方法：</p>
+<ol>
+<li>定义了一个空数组:</li>
+</ol>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  数组名= <span class="keyword">new</span> <span class="type">Array</span>();</div></pre></td></tr></table></figure>
+<ol>
+<li>定义时指定有n个空元素的数组：</li>
+</ol>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> 数组名 =<span class="keyword">new</span> <span class="type">Array</span>(n);</div></pre></td></tr></table></figure>
+<p>3.定义数组的时候，直接初始化数据：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span>  数组名 = [<span class="xml"><span class="tag">&lt;<span class="name">元素1</span>&gt;</span>, <span class="tag">&lt;<span class="name">元素2</span>&gt;</span>, <span class="tag">&lt;<span class="name">元素3</span>&gt;</span>...];</span></div></pre></td></tr></table></figure>
+<p>我们定义myArray数组，并赋值，代码如下：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var myArray = [<span class="number">2</span>, <span class="number">8</span>, <span class="number">6</span>];</div></pre></td></tr></table></figure>
+<p>数组属性：</p>
+<p>length 用法：&lt;数组对象&gt;.length；</p>
+<p>数组方法：<br>|方法|描述|<br>|—|—|<br>|concat()|连接两个数组或更多的数组，并返回结果|<br>|join()|把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔|<br>|pop()|删除并返回数组的最后一个元素|<br>|push()|向数组的末尾添加一个或更多元素，并返回新的长度|<br>|reverse()|颠倒数组中元素的顺序|<br>|shift()|删除并返回数组的第一个元素|<br>|slice()|从某个已有的数组返回选定的元素|<br>|sort()|对数组的元素进行排序|<br>|splice()|删除元素，并向数组添加新元素|<br>|toSource()|返回该对象的源代码|<br>|toString()|把数组转换为字符串，并返回结果|<br>|toLocaleString()|把数组转换为本地数组，并返回结果|<br>|unshift()|向数组的开头添加一个或多个元素，并返回新的长度|<br>|valueOf()|返回数组元素的原始值|</p>
+<h4 id="数组连接concat"><a href="#数组连接concat" class="headerlink" title="数组连接concat()"></a>数组连接concat()</h4><p>concat() 方法用于连接两个或多个数组。此方法返回一个新数组，不改变原来的数组。</p>
+<p>语法</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayObject.concat(array1,array2,...,arrayN)</div></pre></td></tr></table></figure>
+<p><strong>注意:  该方法不会改变现有的数组，而仅仅会返回被连接数组的一个副本。</strong></p>
+<p>我们创建一个数组，将把 concat() 中的参数连接到数组 myarr 中，代码如下：</p>
+<p>参数说明：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> mya = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>);</span></div><div class="line"><span class="actionscript">  mya[<span class="number">0</span>] = <span class="string">"1"</span>;</span></div><div class="line"><span class="actionscript">  mya[<span class="number">1</span>] = <span class="string">"2"</span>;</span></div><div class="line"><span class="actionscript">  mya[<span class="number">2</span>] = <span class="string">"3"</span>;</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mya.concat(<span class="number">4</span>,<span class="number">5</span>)+<span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mya);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span></div><div class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></div></pre></td></tr></table></figure>
+<p>我们创建了三个数组，然后使用 concat() 把它们连接起来，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> mya1= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"hello!"</span>)</span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> mya2= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"I"</span>,<span class="string">"love"</span>);</span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> mya3= <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"JavaScript"</span>,<span class="string">"!"</span>);</span></div><div class="line"><span class="actionscript">  <span class="keyword">var</span> mya4=mya1.concat(mya2,mya3);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(mya4);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hello!,I,love,JavaScript,!</div></pre></td></tr></table></figure>
+<h4 id="指定分隔符连接数组元素join"><a href="#指定分隔符连接数组元素join" class="headerlink" title="指定分隔符连接数组元素join()"></a>指定分隔符连接数组元素join()</h4><p>join()方法用于把数组中的所有元素放入一个字符串。元素是通过指定的分隔符进行分隔的。<br>语法：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayObject.<span class="keyword">join</span>(分隔符)</div></pre></td></tr></table></figure>
+<p>参数说明:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>separator</td>
+<td>可选，指定要使用的分隔符，若省略，则使用逗号作为分隔符</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：返回一个字符串，该字符串把数组中的各个元素串起来，用&lt;分隔符&gt;置于元素与元素之间。这个方法不影响数组原本的内容。</p>
+</blockquote>
+<p> 我们使用join（）方法，将数组的所有元素放入一个字符串中，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> myarr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>);</span></div><div class="line"><span class="actionscript">  myarr[<span class="number">0</span>] = <span class="string">"I"</span>;</span></div><div class="line"><span class="actionscript">  myarr[<span class="number">1</span>] = <span class="string">"love"</span>;</span></div><div class="line"><span class="actionscript">  myarr[<span class="number">2</span>] = <span class="string">"JavaScript"</span>;</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr.join());</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">I,</span>love,JavaScript</div></pre></td></tr></table></figure></p>
+<h4 id="颠倒数组元素顺序reverse"><a href="#颠倒数组元素顺序reverse" class="headerlink" title="颠倒数组元素顺序reverse()"></a>颠倒数组元素顺序reverse()</h4><p>reverse() 方法用于颠倒数组中元素的顺序。</p>
+<p>语法：</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayObject.<span class="keyword">reverse</span>()</div></pre></td></tr></table></figure>
+<p>注意：该方法会改变原来的数组，而不会创建新的数组。</p>
+<p>定义数组myarr并赋值，然后颠倒其元素的顺序：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> myarr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>)</span></div><div class="line"><span class="actionscript">  myarr[<span class="number">0</span>] = <span class="string">"1"</span></span></div><div class="line"><span class="actionscript">  myarr[<span class="number">1</span>] = <span class="string">"2"</span></span></div><div class="line"><span class="actionscript">  myarr[<span class="number">2</span>] = <span class="string">"3"</span></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr + <span class="string">"&lt;br /&gt;"</span>)</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr.reverse())</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span></div><div class="line"><span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span></div></pre></td></tr></table></figure>
+<h4 id="选定元素slice"><a href="#选定元素slice" class="headerlink" title="选定元素slice()"></a>选定元素slice()</h4><p>slice() 方法可从已有的数组中返回选定的元素。</p>
+<p>语法</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arrayObject.slice(<span class="built_in">start</span>,<span class="keyword">end</span>)</div></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<blockquote>
+<p>1.返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+<ol>
+<li>该方法并不会修改数组，而是返回一个子数组。</li>
+</ol>
+</blockquote>
+<p>注意：</p>
+<ol>
+<li><p>可使用负值从数组的尾部选取元素。</p>
+</li>
+<li><p>如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。</p>
+</li>
+<li><p>String.slice() 与 Array.slice() 相似。</p>
+</li>
+</ol>
+<p>我们将创建一个新数组，然后从其中选取的元素，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="keyword">var</span> myarr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr + <span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr.slice(<span class="number">2</span>,<span class="number">4</span>) + <span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span></div><div class="line"><span class="number">3</span>,<span class="number">4</span></div><div class="line"><span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span></div></pre></td></tr></table></figure>
+<h4 id="数组排序-sort"><a href="#数组排序-sort" class="headerlink" title="数组排序(sort)"></a>数组排序(sort)</h4><p>sort()方法使数组中的元素按照一定的顺序排列</p>
+<p>语法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">arrayObject</span><span class="selector-class">.sort</span>(方法函数)</div></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方法函数</td>
+<td>可选。规定顺序排序。必须是函数</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>如果不指定&lt;方法函数&gt;，则按unicode码顺序排列</li>
+<li>如果指定&lt;方法函数&gt;,则按&lt;方法函数&gt;所指定的排序方法排序</li>
+</ol>
+<blockquote>
+<p>注意：该函数要比较两个值，然后返回一个用于说明这两个值相对顺序的数字。比较函数应该具有两个参数a和b,其返回值如下。<br>若返回值 &lt;= -1,则表示A在排序后的序列中出现在Ｂ之前<br>若返回值 &gt; -1　＆＆　&lt; 1，则表示A和Ｂ具有相同的排序顺序<br>若返回子 &gt;= 1 ,则表示Ａ在排序后的序列中出现在Ｂ之后</p>
+</blockquote>
+<p>１，使用sort将数组进行排序</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript"><span class="keyword">var</span> myarr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"Hello"</span>,<span class="string">"John"</span>,<span class="string">"love"</span>,<span class="string">"JavaScript"</span>);</span></div><div class="line"><span class="javascript"><span class="keyword">var</span> myarr2 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"80"</span>,<span class="string">"16"</span>,<span class="string">"50"</span>,<span class="string">"6"</span>,<span class="string">"100"</span>,<span class="string">"1"</span>);</span></div><div class="line"><span class="javascript"><span class="built_in">document</span>.write(myarr1.sort()+<span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript"><span class="built_in">document</span>.write(myarr2.sort());</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>运行结果：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hello,JavaScript,John,love</div><div class="line"><span class="number">1</span>,<span class="number">100</span>,<span class="number">16</span>,<span class="number">50</span>,<span class="number">6</span>,<span class="number">80</span></div></pre></td></tr></table></figure></p>
+<p>注意:上面的代码没有按照数值的大小对数字进行排序。</p>
+<p>2.如要实现这一点，就必须使用一个排序函数，代码<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">  <span class="function"><span class="keyword">function</span> <span class="title">sortNum</span><span class="params">(a,b)</span> </span>&#123;</span></div><div class="line"><span class="actionscript">  <span class="keyword">return</span> a - b;</span></div><div class="line"><span class="actionscript"> <span class="comment">//升序，如降序，把“a - b”该成“b - a”</span></span></div><div class="line"><span class="undefined">&#125;</span></div><div class="line"><span class="javascript"> <span class="keyword">var</span> myarr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"80"</span>,<span class="string">"16"</span>,<span class="string">"50"</span>,<span class="string">"6"</span>,<span class="string">"100"</span>,<span class="string">"1"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr + <span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write(myarr.sort(sortNum));</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>运行结果：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">80</span>,<span class="number">16</span>,<span class="number">50</span>,<span class="number">6</span>,<span class="number">100</span>,<span class="number">1</span></div><div class="line"><span class="number">1</span>,<span class="number">6</span>,<span class="number">16</span>,<span class="number">50</span>,<span class="number">80</span>,<span class="number">100</span></div></pre></td></tr></table></figure></p>
 <p><div id="disqus_thread"></div></p>
 <script>
 
@@ -951,7 +1374,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#switch语法"><span class="nav-number">2.1.</span> <span class="nav-text">switch语法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for语句结构："><span class="nav-number">2.2.</span> <span class="nav-text">for语句结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#do-while"><span class="nav-number">2.3.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#break"><span class="nav-number">2.4.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continue"><span class="nav-number">2.5.</span> <span class="nav-text">continue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有参数的函数"><span class="nav-number">3.1.</span> <span class="nav-text">有参数的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回值的函数"><span class="nav-number">3.2.</span> <span class="nav-text">返回值的函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#鼠标单击事件-onclick-）"><span class="nav-number">4.0.1.</span> <span class="nav-text">鼠标单击事件( onclick ）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标移开事件（onmouseout）"><span class="nav-number">4.1.</span> <span class="nav-text">鼠标移开事件（onmouseout）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光标聚焦事件（onfocus）"><span class="nav-number">4.2.</span> <span class="nav-text">光标聚焦事件（onfocus）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#失焦事件（onblur）"><span class="nav-number">4.3.</span> <span class="nav-text">失焦事件（onblur）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容选中事件（onselect）"><span class="nav-number">4.4.</span> <span class="nav-text">内容选中事件（onselect）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本框内容改变事件（onchange）"><span class="nav-number">4.5.</span> <span class="nav-text">文本框内容改变事件（onchange）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载事件（onload）"><span class="nav-number">4.6.</span> <span class="nav-text">加载事件（onload）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载事件（onunload）"><span class="nav-number">4.7.</span> <span class="nav-text">卸载事件（onunload）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">5.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是对象"><span class="nav-number">5.1.</span> <span class="nav-text">什么是对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date-日期对象"><span class="nav-number">5.2.</span> <span class="nav-text">Date 日期对象</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#switch语法"><span class="nav-number">2.1.</span> <span class="nav-text">switch语法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for语句结构："><span class="nav-number">2.2.</span> <span class="nav-text">for语句结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#do-while"><span class="nav-number">2.3.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#break"><span class="nav-number">2.4.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continue"><span class="nav-number">2.5.</span> <span class="nav-text">continue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有参数的函数"><span class="nav-number">3.1.</span> <span class="nav-text">有参数的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回值的函数"><span class="nav-number">3.2.</span> <span class="nav-text">返回值的函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#鼠标单击事件-onclick-）"><span class="nav-number">4.0.1.</span> <span class="nav-text">鼠标单击事件( onclick ）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标移开事件（onmouseout）"><span class="nav-number">4.1.</span> <span class="nav-text">鼠标移开事件（onmouseout）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光标聚焦事件（onfocus）"><span class="nav-number">4.2.</span> <span class="nav-text">光标聚焦事件（onfocus）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#失焦事件（onblur）"><span class="nav-number">4.3.</span> <span class="nav-text">失焦事件（onblur）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容选中事件（onselect）"><span class="nav-number">4.4.</span> <span class="nav-text">内容选中事件（onselect）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本框内容改变事件（onchange）"><span class="nav-number">4.5.</span> <span class="nav-text">文本框内容改变事件（onchange）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载事件（onload）"><span class="nav-number">4.6.</span> <span class="nav-text">加载事件（onload）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载事件（onunload）"><span class="nav-number">4.7.</span> <span class="nav-text">卸载事件（onunload）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">5.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是对象"><span class="nav-number">5.1.</span> <span class="nav-text">什么是对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date-日期对象"><span class="nav-number">5.2.</span> <span class="nav-text">Date 日期对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-字符串对象"><span class="nav-number">5.3.</span> <span class="nav-text">String 字符串对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定位置的字符charAt"><span class="nav-number">5.4.</span> <span class="nav-text">返回指定位置的字符charAt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定的字符串首次出现的位置-indexOf"><span class="nav-number">5.5.</span> <span class="nav-text">返回指定的字符串首次出现的位置(indexOf)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串分割split"><span class="nav-number">5.6.</span> <span class="nav-text">字符串分割split()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取字符串substring"><span class="nav-number">5.7.</span> <span class="nav-text">提取字符串substring()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取指定数目的字符substr"><span class="nav-number">5.8.</span> <span class="nav-text">提取指定数目的字符substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Math对象"><span class="nav-number">5.9.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机数-random"><span class="nav-number">5.10.</span> <span class="nav-text">随机数 random()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-数组对象"><span class="nav-number">5.11.</span> <span class="nav-text">Array 数组对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组连接concat"><span class="nav-number">5.12.</span> <span class="nav-text">数组连接concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定分隔符连接数组元素join"><span class="nav-number">5.13.</span> <span class="nav-text">指定分隔符连接数组元素join()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颠倒数组元素顺序reverse"><span class="nav-number">5.14.</span> <span class="nav-text">颠倒数组元素顺序reverse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选定元素slice"><span class="nav-number">5.15.</span> <span class="nav-text">选定元素slice()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组排序-sort"><span class="nav-number">5.16.</span> <span class="nav-text">数组排序(sort)</span></a></li></ol></li></ol></div>
             
 
           </div>
