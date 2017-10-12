@@ -136,7 +136,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20171009195315588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171009215827315?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171009215921046?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-10T11:13:30.806Z">
+<meta property="og:updated_time" content="2017-10-12T11:35:36.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript入门篇">
 <meta name="twitter:description" content="javascript介绍JavaScript代码写在`&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;`之间。`&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;表示在&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;`之间的是文本类型(text),javascript是为了告诉浏览器里面的文本是属于JavaScript语言。 JS文件">
@@ -610,7 +610,58 @@ str2：文本框中的内容，可以修改
     3. 相同 name 的窗口只能创建一个，要想创建多个窗口则 name 不能相同。
     4. name 不能包含有空格。
 参数字符串：可选参数，设置窗口参数，各参数用逗号隔开。
-</code></pre><p>参数表：<br>| 参数    |     值            |说明 |<br>|————|————–|————-|<br>|top|Number|窗口顶部离开屏幕顶部的像素数|<br>|left|Number|窗口左端离开屏幕左端的像素数|<br>|width|Number|窗口的宽度|<br>|height|Number|窗口的高度|<br>|menubar|yes,no|窗口有没有菜单|<br>|toolbar|yes,no|窗口有没有工具条|<br>|scrollbars|yes,no|窗口有没有滚动条|<br>|status|yes,no|窗口有没有状态栏|</p>
+</code></pre><p>参数表：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>Number</td>
+<td>窗口顶部离开屏幕顶部的像素数</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Number</td>
+<td>窗口左端离开屏幕左端的像素数</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Number</td>
+<td>窗口的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Number</td>
+<td>窗口的高度</td>
+</tr>
+<tr>
+<td>menubar</td>
+<td>yes,no</td>
+<td>窗口有没有菜单</td>
+</tr>
+<tr>
+<td>toolbar</td>
+<td>yes,no</td>
+<td>窗口有没有工具条</td>
+</tr>
+<tr>
+<td>scrollbars</td>
+<td>yes,no</td>
+<td>窗口有没有滚动条</td>
+</tr>
+<tr>
+<td>status</td>
+<td>yes,no</td>
+<td>窗口有没有状态栏</td>
+</tr>
+</tbody>
+</table>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>prompt<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">		<span class="function"><span class="keyword">function</span> <span class="title">Wopen</span><span class="params">()</span></span>&#123;</span></div><div class="line"><span class="javascript">			<span class="built_in">window</span>.open(<span class="string">'http://www.imooc.com'</span>,<span class="string">'_blank'</span>,<span class="string">'width=600,height=400,menubar=no,toolbar=no,status=no,scrollbars=yes,top=10,left=0'</span>)</span></div><div class="line"><span class="undefined">		&#125;</span></div><div class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"点击我，打开新窗口"</span> <span class="attr">onclick</span>=<span class="string">"Wopen()"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="关闭窗口（window-close）"><a href="#关闭窗口（window-close）" class="headerlink" title="关闭窗口（window.close）"></a>关闭窗口（window.close）</h3><p>close()关闭窗口</p>
 <p>用法：</p>
