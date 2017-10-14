@@ -140,7 +140,11 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20171012201955918?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171012202005085?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171012202641162?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-12T12:28:39.742Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20171014115004579?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171014120309572?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171014121630309?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171014121909461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-10-14T04:42:17.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript进阶篇">
 <meta name="twitter:description" content="数组创建数组语法： 1var myarray=new Array(); 我们创建数组的同时，还可以为数组指定长度，长度可任意指定。 1var myarray= new Array(8); //创建数组，存储8个数据。  注意：1.创建的新数组是空数组，没有值，如输出，则显示undefined。2.虽然创建数组时，指定了长度，但实际上数组都是变长的，也就是说即使指定了长度为8，仍然可以将元素存储在规">
@@ -1185,6 +1189,114 @@
 <p>注意：和在浏览器中单击两次后退按钮操作一样。</p>
 <p>同理，返回当前页面之后浏览过的第三个历史页面，代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">window</span><span class="selector-class">.history</span><span class="selector-class">.go</span>(3);</div></pre></td></tr></table></figure>
+<h4 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h4><p>location用于获取或设置窗体的URL，并且可以用于解析URL。</p>
+<p>语法:</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.[属性<span class="string">|方法]</span></div></pre></td></tr></table></figure>
+<p>location对象属性图示:</p>
+<p><img src="http://img.blog.csdn.net/20171014115004579?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>location 对象属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>设置或返回从’#’开始的URL(锚)</td>
+</tr>
+<tr>
+<td>host</td>
+<td>设置或返回主机名和当前URL的端口号</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>设置或返回当前URL的主机名</td>
+</tr>
+<tr>
+<td>href</td>
+<td>设置或返回完整的URL</td>
+</tr>
+<tr>
+<td>pathname</td>
+<td>设置或返回当前URL的路径部分</td>
+</tr>
+<tr>
+<td>port</td>
+<td>设置或返回当前URL的端口号</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>设置或返回当前URL的协议</td>
+</tr>
+<tr>
+<td>search</td>
+<td>设置或返回从’?’开始的URL(查询部分)</td>
+</tr>
+</tbody>
+</table>
+<p>location 对象方法:</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>assign()</td>
+<td>加载新的文档</td>
+</tr>
+<tr>
+<td>reload()</td>
+<td>重新加载当前文档</td>
+</tr>
+<tr>
+<td>replace()</td>
+<td>用新的文档替换当前文档</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Navigator对象"><a href="#Navigator对象" class="headerlink" title="Navigator对象"></a>Navigator对象</h4><p>Navigator 对象包含有关浏览器的信息，通常用于检测浏览器与操作系统的版本。</p>
+<p>对象属性:</p>
+<p><img src="http://img.blog.csdn.net/20171014120309572?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>查看浏览器的名称和版本，代码如下:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="actionscript">   <span class="keyword">var</span> browser=navigator.appName;</span></div><div class="line"><span class="actionscript">   <span class="keyword">var</span> b_version=navigator.appVersion;</span></div><div class="line"><span class="javascript">   <span class="built_in">document</span>.write(<span class="string">"Browser name"</span>+browser);</span></div><div class="line"><span class="javascript">   <span class="built_in">document</span>.write(<span class="string">"&lt;br&gt;"</span>);</span></div><div class="line"><span class="javascript">   <span class="built_in">document</span>.write(<span class="string">"Browser version"</span>+b_version);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="userAgent"><a href="#userAgent" class="headerlink" title="userAgent"></a>userAgent</h4><p>返回用户代理头的字符串表示(就是包括浏览器版本信息等的字符串)</p>
+<p>语法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">navigator</span><span class="selector-class">.userAgent</span></div></pre></td></tr></table></figure></p>
+<p>几种浏览的user_agent.，像360的兼容模式用的是IE、极速模式用的是chrom的内核。</p>
+<p><img src="http://img.blog.csdn.net/20171014121630309?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>使用userAgent判断使用的是什么浏览器(假设使用的是IE8浏览器),代码如下:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function validB()&#123;</div><div class="line">  var u_agent = navigator.userAgent;</div><div class="line">  var <span class="attribute">B_name</span>=<span class="string">"Failed to identify the browser"</span>;</div><div class="line">  <span class="keyword">if</span>(u_agent.indexOf(<span class="string">"Firefox"</span>)&gt;-1)&#123;</div><div class="line">      <span class="attribute">B_name</span>=<span class="string">"Firefox"</span>;</div><div class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(u_agent.indexOf(<span class="string">"Chrome"</span>)&gt;-1)&#123;</div><div class="line">      <span class="attribute">B_name</span>=<span class="string">"Chrome"</span>;</div><div class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(u_agent.indexOf(<span class="string">"MSIE"</span>)&gt;-1&amp;&amp;u_agent.indexOf(<span class="string">"Trident"</span>)&gt;-1)&#123;</div><div class="line">      <span class="attribute">B_name</span>=<span class="string">"IE(8-10)"</span>;  </div><div class="line">  &#125;</div><div class="line">    document.write(<span class="string">"B_name:"</span>+B_name+<span class="string">"&lt;br&gt;"</span>);</div><div class="line">    document.write(<span class="string">"u_agent:"</span>+u_agent+<span class="string">"&lt;br&gt;"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="screen对象"><a href="#screen对象" class="headerlink" title="screen对象"></a>screen对象</h4><p>screen对象用于获取用户的屏幕信息。</p>
+<p>语法：</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.<span class="keyword">screen</span>.属性</div></pre></td></tr></table></figure>
+<p>对象属性:</p>
+<p><img src="http://img.blog.csdn.net/20171014121909461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h4 id="屏幕分辨率的高和宽"><a href="#屏幕分辨率的高和宽" class="headerlink" title="屏幕分辨率的高和宽"></a>屏幕分辨率的高和宽</h4><p>window.screen 对象包含有关用户屏幕的信息。</p>
+<ol>
+<li>screen.height 返回屏幕分辨率的高</li>
+<li>screen.width 返回屏幕分辨率的宽</li>
+</ol>
+<p>注意:</p>
+<ol>
+<li>单位以像素计。</li>
+<li>window.screen 对象在编写时可以不使用 window 这个前缀。</li>
+</ol>
+<p>我们来获取屏幕的高和宽，代码如下:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write( <span class="string">"屏幕宽度："</span>+screen.width+<span class="string">"px&lt;br /&gt;"</span> );</span></div><div class="line"><span class="javascript">  <span class="built_in">document</span>.write( <span class="string">"屏幕高度："</span>+screen.height+<span class="string">"px&lt;br /&gt;"</span> );</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="屏幕可用高和宽度"><a href="#屏幕可用高和宽度" class="headerlink" title="屏幕可用高和宽度"></a>屏幕可用高和宽度</h4><ol>
+<li>screen.availWidth 属性返回访问者屏幕的宽度，以像素计，减去界面特性，比如任务栏。</li>
+<li>screen.availHeight 属性返回访问者屏幕的高度，以像素计，减去界面特性，比如任务栏。</li>
+</ol>
+<p>注意:</p>
+<p>不同系统的任务栏默认高度不一样，及任务栏的位置可在屏幕上下左右任何位置，所以有可能可用宽度和高度不一样。</p>
+<p>我们来获取屏幕的可用高和宽度，代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript"><span class="built_in">document</span>.write(<span class="string">"可用宽度："</span> + screen.availWidth);</span></div><div class="line"><span class="javascript"><span class="built_in">document</span>.write(<span class="string">"可用高度："</span> + screen.availHeight);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>注意:根据屏幕的不同显示值不同。</strong></p>
 <p><div id="disqus_thread"></div></p>
 <script>
 
@@ -1521,7 +1633,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#switch语法"><span class="nav-number">2.1.</span> <span class="nav-text">switch语法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for语句结构："><span class="nav-number">2.2.</span> <span class="nav-text">for语句结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#do-while"><span class="nav-number">2.3.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#break"><span class="nav-number">2.4.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continue"><span class="nav-number">2.5.</span> <span class="nav-text">continue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有参数的函数"><span class="nav-number">3.1.</span> <span class="nav-text">有参数的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回值的函数"><span class="nav-number">3.2.</span> <span class="nav-text">返回值的函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#鼠标单击事件-onclick-）"><span class="nav-number">4.0.1.</span> <span class="nav-text">鼠标单击事件( onclick ）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标移开事件（onmouseout）"><span class="nav-number">4.1.</span> <span class="nav-text">鼠标移开事件（onmouseout）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光标聚焦事件（onfocus）"><span class="nav-number">4.2.</span> <span class="nav-text">光标聚焦事件（onfocus）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#失焦事件（onblur）"><span class="nav-number">4.3.</span> <span class="nav-text">失焦事件（onblur）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容选中事件（onselect）"><span class="nav-number">4.4.</span> <span class="nav-text">内容选中事件（onselect）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本框内容改变事件（onchange）"><span class="nav-number">4.5.</span> <span class="nav-text">文本框内容改变事件（onchange）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载事件（onload）"><span class="nav-number">4.6.</span> <span class="nav-text">加载事件（onload）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载事件（onunload）"><span class="nav-number">4.7.</span> <span class="nav-text">卸载事件（onunload）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">5.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是对象"><span class="nav-number">5.1.</span> <span class="nav-text">什么是对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date-日期对象"><span class="nav-number">5.2.</span> <span class="nav-text">Date 日期对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-字符串对象"><span class="nav-number">5.3.</span> <span class="nav-text">String 字符串对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定位置的字符charAt"><span class="nav-number">5.4.</span> <span class="nav-text">返回指定位置的字符charAt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定的字符串首次出现的位置-indexOf"><span class="nav-number">5.5.</span> <span class="nav-text">返回指定的字符串首次出现的位置(indexOf)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串分割split"><span class="nav-number">5.6.</span> <span class="nav-text">字符串分割split()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取字符串substring"><span class="nav-number">5.7.</span> <span class="nav-text">提取字符串substring()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取指定数目的字符substr"><span class="nav-number">5.8.</span> <span class="nav-text">提取指定数目的字符substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Math对象"><span class="nav-number">5.9.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机数-random"><span class="nav-number">5.10.</span> <span class="nav-text">随机数 random()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-数组对象"><span class="nav-number">5.11.</span> <span class="nav-text">Array 数组对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组连接concat"><span class="nav-number">5.12.</span> <span class="nav-text">数组连接concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定分隔符连接数组元素join"><span class="nav-number">5.13.</span> <span class="nav-text">指定分隔符连接数组元素join()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颠倒数组元素顺序reverse"><span class="nav-number">5.14.</span> <span class="nav-text">颠倒数组元素顺序reverse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选定元素slice"><span class="nav-number">5.15.</span> <span class="nav-text">选定元素slice()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组排序-sort"><span class="nav-number">5.16.</span> <span class="nav-text">数组排序(sort)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象"><span class="nav-number">6.</span> <span class="nav-text">浏览器对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window对象"><span class="nav-number">6.1.</span> <span class="nav-text">window对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-计时器"><span class="nav-number">6.2.</span> <span class="nav-text">JavaScript 计时器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消计时器clearInterval"><span class="nav-number">6.3.</span> <span class="nav-text">取消计时器clearInterval()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计时器setTimeout"><span class="nav-number">6.4.</span> <span class="nav-text">计时器setTimeout()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消计时器clearTimeout"><span class="nav-number">6.5.</span> <span class="nav-text">取消计时器clearTimeout()</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#switch语法"><span class="nav-number">2.1.</span> <span class="nav-text">switch语法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for语句结构："><span class="nav-number">2.2.</span> <span class="nav-text">for语句结构：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#do-while"><span class="nav-number">2.3.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#break"><span class="nav-number">2.4.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continue"><span class="nav-number">2.5.</span> <span class="nav-text">continue</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">3.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#有参数的函数"><span class="nav-number">3.1.</span> <span class="nav-text">有参数的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回值的函数"><span class="nav-number">3.2.</span> <span class="nav-text">返回值的函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#鼠标单击事件-onclick-）"><span class="nav-number">4.0.1.</span> <span class="nav-text">鼠标单击事件( onclick ）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标移开事件（onmouseout）"><span class="nav-number">4.1.</span> <span class="nav-text">鼠标移开事件（onmouseout）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光标聚焦事件（onfocus）"><span class="nav-number">4.2.</span> <span class="nav-text">光标聚焦事件（onfocus）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#失焦事件（onblur）"><span class="nav-number">4.3.</span> <span class="nav-text">失焦事件（onblur）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内容选中事件（onselect）"><span class="nav-number">4.4.</span> <span class="nav-text">内容选中事件（onselect）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文本框内容改变事件（onchange）"><span class="nav-number">4.5.</span> <span class="nav-text">文本框内容改变事件（onchange）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载事件（onload）"><span class="nav-number">4.6.</span> <span class="nav-text">加载事件（onload）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载事件（onunload）"><span class="nav-number">4.7.</span> <span class="nav-text">卸载事件（onunload）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">5.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是对象"><span class="nav-number">5.1.</span> <span class="nav-text">什么是对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date-日期对象"><span class="nav-number">5.2.</span> <span class="nav-text">Date 日期对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String-字符串对象"><span class="nav-number">5.3.</span> <span class="nav-text">String 字符串对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定位置的字符charAt"><span class="nav-number">5.4.</span> <span class="nav-text">返回指定位置的字符charAt</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#返回指定的字符串首次出现的位置-indexOf"><span class="nav-number">5.5.</span> <span class="nav-text">返回指定的字符串首次出现的位置(indexOf)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串分割split"><span class="nav-number">5.6.</span> <span class="nav-text">字符串分割split()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取字符串substring"><span class="nav-number">5.7.</span> <span class="nav-text">提取字符串substring()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提取指定数目的字符substr"><span class="nav-number">5.8.</span> <span class="nav-text">提取指定数目的字符substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Math对象"><span class="nav-number">5.9.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#随机数-random"><span class="nav-number">5.10.</span> <span class="nav-text">随机数 random()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-数组对象"><span class="nav-number">5.11.</span> <span class="nav-text">Array 数组对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组连接concat"><span class="nav-number">5.12.</span> <span class="nav-text">数组连接concat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指定分隔符连接数组元素join"><span class="nav-number">5.13.</span> <span class="nav-text">指定分隔符连接数组元素join()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#颠倒数组元素顺序reverse"><span class="nav-number">5.14.</span> <span class="nav-text">颠倒数组元素顺序reverse()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选定元素slice"><span class="nav-number">5.15.</span> <span class="nav-text">选定元素slice()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组排序-sort"><span class="nav-number">5.16.</span> <span class="nav-text">数组排序(sort)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器对象"><span class="nav-number">6.</span> <span class="nav-text">浏览器对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window对象"><span class="nav-number">6.1.</span> <span class="nav-text">window对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript-计时器"><span class="nav-number">6.2.</span> <span class="nav-text">JavaScript 计时器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消计时器clearInterval"><span class="nav-number">6.3.</span> <span class="nav-text">取消计时器clearInterval()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计时器setTimeout"><span class="nav-number">6.4.</span> <span class="nav-text">计时器setTimeout()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#取消计时器clearTimeout"><span class="nav-number">6.5.</span> <span class="nav-text">取消计时器clearTimeout()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#location对象"><span class="nav-number">6.6.</span> <span class="nav-text">location对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Navigator对象"><span class="nav-number">6.7.</span> <span class="nav-text">Navigator对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userAgent"><span class="nav-number">6.8.</span> <span class="nav-text">userAgent</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#screen对象"><span class="nav-number">6.9.</span> <span class="nav-text">screen对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏幕分辨率的高和宽"><span class="nav-number">6.10.</span> <span class="nav-text">屏幕分辨率的高和宽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏幕可用高和宽度"><span class="nav-number">6.11.</span> <span class="nav-text">屏幕可用高和宽度</span></a></li></ol></li></ol></div>
             
 
           </div>
