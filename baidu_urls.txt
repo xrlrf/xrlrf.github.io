@@ -1,5 +1,5 @@
 http://wustxiao.cn/2017/10/14/C-GUI-Programming-with-QT学习笔记day01/
+http://wustxiao.cn/2017/10/14/C-GUI-Programming-with-QT学习笔记day02/
 http://wustxiao.cn/2017/10/11/JavaScript进阶篇/
 http://wustxiao.cn/2017/10/10/相对定位与绝对定位的区别/
 http://wustxiao.cn/2017/10/10/hello-world/
-http://wustxiao.cn/2017/10/10/前端基本布局/
