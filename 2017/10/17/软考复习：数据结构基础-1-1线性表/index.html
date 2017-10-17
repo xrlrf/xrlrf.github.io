@@ -134,7 +134,7 @@
 <meta property="og:description" content="1.1 线性表线性表的基本运算１. 查找运算  在线性表中查找具有给定键值的结点２. 插入运算  在线性表第i(0&amp;lt;=i&amp;lt;=n-1)个结点的前面或者后面插入一个新的结点  删除运算删除线性表的第i(0&amp;lt;=i&amp;lt;=n-1)个结点。４. 其他运算 统计线性表中节点的个数 输出线性表各节点的值 复制线性表 线性表分拆 线性表合并 线性表排序 按某种规则整理线性表    线性表的存储">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20171017214206878?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-17T13:44:26.786Z">
+<meta property="og:updated_time" content="2017-10-17T13:48:47.846Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考复习：数据结构基础(1.1线性表)">
 <meta name="twitter:description" content="1.1 线性表线性表的基本运算１. 查找运算  在线性表中查找具有给定键值的结点２. 插入运算  在线性表第i(0&amp;lt;=i&amp;lt;=n-1)个结点的前面或者后面插入一个新的结点  删除运算删除线性表的第i(0&amp;lt;=i&amp;lt;=n-1)个结点。４. 其他运算 统计线性表中节点的个数 输出线性表各节点的值 复制线性表 线性表分拆 线性表合并 线性表排序 按某种规则整理线性表    线性表的存储">
@@ -578,8 +578,10 @@
 <li><p>顺序存储<br>可以用顺序存储线性表来表示栈，为了指明当前执行插入和删除运算的栈顶位置，需要一个地址变量top<br>指出栈顶结点在数组中的下标</p>
 </li>
 <li><p>链式存储<br>可以用链表实现。</p>
-<h4 id="1-1-2-队列"><a href="#1-1-2-队列" class="headerlink" title="1.1.2 队列"></a>1.1.2 队列</h4><p>具有先进先出的特征</p>
 </li>
+</ol>
+<h4 id="1-1-2-队列"><a href="#1-1-2-队列" class="headerlink" title="1.1.2 队列"></a>1.1.2 队列</h4><p>  具有先进先出的特征</p>
+<ol>
 <li><p>顺序存储<br>随着一系列进队和出队运算，会出现前端空着，而队列空间已用完的情况<br>一种可行的方法是把队列中的结点一刀队列的前端，修改头指针和尾指针<br>另一种更好的解决方法是采用循环队列</p>
 <blockquote>
 <p>循环队列就是将队列数组的第一个元素与最后一个元素连接起来。<br>由于其中会造成队空和队满的条件同为head==tail。因此可采用只剩下一个空闲结点，就认为队列已满</p>
