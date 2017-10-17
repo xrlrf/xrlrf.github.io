@@ -125,18 +125,18 @@
 
 
 
-<meta name="description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta name="description" content="1.1 线性表线性表的基本运算１. 查找运算  在线性表中查找具有给定键值的结点２. 插入运算  在线性表第i(0&amp;lt;=i&amp;lt;=n-1)个结点的前面或者后面插入一个新的结点  删除运算删除线性表的第i(0&amp;lt;=i&amp;lt;=n-1)个结点。４. 其他运算 统计线性表中节点的个数 输出线性表各节点的值 复制线性表 线性表分拆 线性表合并 线性表排序 按某种规则整理线性表    线性表的存储">
 <meta name="keywords" content="数据结构 软件设计师">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软考复习：数据结构基础(1.1线性表)">
 <meta property="og:url" content="http://wustxiao.cn/2017/10/17/软考复习：数据结构基础-1-1线性表/index.html">
 <meta property="og:site_name" content="xiaorui&#39;s blog">
-<meta property="og:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta property="og:description" content="1.1 线性表线性表的基本运算１. 查找运算  在线性表中查找具有给定键值的结点２. 插入运算  在线性表第i(0&amp;lt;=i&amp;lt;=n-1)个结点的前面或者后面插入一个新的结点  删除运算删除线性表的第i(0&amp;lt;=i&amp;lt;=n-1)个结点。４. 其他运算 统计线性表中节点的个数 输出线性表各节点的值 复制线性表 线性表分拆 线性表合并 线性表排序 按某种规则整理线性表    线性表的存储">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T06:31:57.528Z">
+<meta property="og:updated_time" content="2017-10-17T08:24:26.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软考复习：数据结构基础(1.1线性表)">
-<meta name="twitter:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta name="twitter:description" content="1.1 线性表线性表的基本运算１. 查找运算  在线性表中查找具有给定键值的结点２. 插入运算  在线性表第i(0&amp;lt;=i&amp;lt;=n-1)个结点的前面或者后面插入一个新的结点  删除运算删除线性表的第i(0&amp;lt;=i&amp;lt;=n-1)个结点。４. 其他运算 统计线性表中节点的个数 输出线性表各节点的值 复制线性表 线性表分拆 线性表合并 线性表排序 按某种规则整理线性表    线性表的存储">
 
 
 
@@ -508,7 +508,130 @@
       
 
       
-        
+        <h3 id="1-1-线性表"><a href="#1-1-线性表" class="headerlink" title="1.1 线性表"></a>1.1 线性表</h3><h4 id="线性表的基本运算"><a href="#线性表的基本运算" class="headerlink" title="线性表的基本运算"></a>线性表的基本运算</h4><p>１. 查找运算<br>  在线性表中查找具有给定键值的结点<br>２. 插入运算<br>  在线性表第i(0&lt;=i&lt;=n-1)个结点的前面或者后面插入一个新的结点</p>
+<ol>
+<li>删除运算<br>删除线性表的第i(0&lt;=i&lt;=n-1)个结点。<br>４. 其他运算<ul>
+<li>统计线性表中节点的个数</li>
+<li>输出线性表各节点的值</li>
+<li>复制线性表</li>
+<li>线性表分拆</li>
+<li>线性表合并</li>
+<li>线性表排序</li>
+<li>按某种规则整理线性表</li>
+</ul>
+</li>
+</ol>
+<h4 id="线性表的存储"><a href="#线性表的存储" class="headerlink" title="线性表的存储"></a>线性表的存储</h4><ol>
+<li><p>顺序存储<br>顺序存储通常用一个数组。<br>优点：能随机存取线性表中的任何一个结点<br>缺点：１，数组大小通常是固定的，不利于任意增加或减少线性表节点的个数</p>
+<pre><code>２，插入和删除线性表的结点时，要移动数组中的其他元素，操作复杂
+</code></pre></li>
+<li><p>链式存储<br>链式存储是用链表存储线性表<br>优点：每个结点的实际存储位置是任意的，插入和删除操作方便，不需要移动表元<br>缺点：１，每个节点增加了一个后继指针成分，增加了存储空间<br>　　　２，不便随机访问线性表的任一结点</p>
+</li>
+</ol>
+<h4 id="在线性表中插入新结点"><a href="#在线性表中插入新结点" class="headerlink" title="在线性表中插入新结点"></a>在线性表中插入新结点</h4><ol>
+<li>顺序存储</li>
+</ol>
+<blockquote>
+<p>设线性表结点类型为整形，插入之前有n个结点，把值为x的结点插入线性表的第i个位置上</p>
+</blockquote>
+<p>插入步骤为：</p>
+<ol>
+<li>检查插入要求的有关参数的合理性</li>
+<li>把原来的第n个结点到第i个结点依次往后移动一个数组元素位置</li>
+<li>把新结点放在第i个位置上</li>
+<li><p>修正线性表的结点个数</p>
+</li>
+<li><p>链式存储</p>
+</li>
+</ol>
+<blockquote>
+<p>在廉洁存储线性表中插入一个键值为x的新结点，分为如下４种情况</p>
+</blockquote>
+<ul>
+<li>在某指针p所指结点之后插入</li>
+<li>插在首结点之前，使待插入结点成为新的首结点</li>
+<li>接在线性表的末尾</li>
+<li>在有序链表中插入，使新的线性表任然有序</li>
+</ul>
+<h4 id="删除线性表的结点"><a href="#删除线性表的结点" class="headerlink" title="删除线性表的结点"></a>删除线性表的结点</h4><ol>
+<li>顺序存储</li>
+</ol>
+<p>删除步骤：</p>
+<ol>
+<li>检查删除要求的有关参数的合理性</li>
+<li>把原来第i+1个表元至第n个结点依次向前移动一个数组元素位置</li>
+<li><p>修正线性表结点个数</p>
+</li>
+<li><p>链式存储</p>
+</li>
+</ol>
+<p>删除步骤：</p>
+<ol>
+<li>如链表为空链表，则不执行删除操作</li>
+<li>如链表的首结点的值为指定值，更改表的头指针为指向首结点的后继结点</li>
+<li>在链表中寻找指定值的结点</li>
+<li>将找到的结点删除</li>
+</ol>
+<h4 id="1-1-1-栈"><a href="#1-1-1-栈" class="headerlink" title="1.1.1 栈"></a>1.1.1 栈</h4><ol>
+<li><p>顺序存储<br>可以用顺序存储线性表来表示栈，为了指明当前执行插入和删除运算的栈顶位置，需要一个地址变量top<br>指出栈顶结点在数组中的下标</p>
+</li>
+<li><p>链式存储<br>可以用链表实现。</p>
+<h4 id="1-1-2-队列"><a href="#1-1-2-队列" class="headerlink" title="1.1.2 队列"></a>1.1.2 队列</h4><p>具有先进先出的特征</p>
+</li>
+<li><p>顺序存储<br>随着一系列进队和出队运算，会出现前端空着，而队列空间已用完的情况<br>一种可行的方法是把队列中的结点一刀队列的前端，修改头指针和尾指针<br>另一种更好的解决方法是采用循环队列</p>
+<blockquote>
+<p>循环队列就是将队列数组的第一个元素与最后一个元素连接起来。<br>由于其中会造成队空和队满的条件同为head==tail。因此可采用只剩下一个空闲结点，就认为队列已满</p>
+</blockquote>
+</li>
+<li><p>链式存储</p>
+</li>
+</ol>
+<h4 id="1-1-3-稀疏矩阵"><a href="#1-1-3-稀疏矩阵" class="headerlink" title="1.1.3 稀疏矩阵"></a>1.1.3 稀疏矩阵</h4><p>如果一个矩阵的元素绝大部分都为零，则称为稀疏矩阵。若直接用一个二维数组表示稀疏矩阵会浪费大量的<br>内存空间，通常采用三元组数组或者十字链表两种方法来表示稀疏矩阵</p>
+<ol>
+<li><p>三元组数组</p>
+<p>稀疏矩阵中的每个非零元素都用一个三元组来表示，即非零元素的 <strong>行号，列号，和他的值</strong><br>然后按照某种顺序将全部非零元素的三元组存入一个数组中</p>
+</li>
+</ol>
+<blockquote>
+<p>如果只对稀疏矩阵的某些单个元素进行处理，则宜采用三元组表示</p>
+</blockquote>
+<p>相关代码为：</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line"></div><div class="line">２. 十字链表</div><div class="line"></div><div class="line">  在十字链表中，同一行的结点和同一列的结点分别顺序循环连接，每个结点既在他所在行的循环链表中又在他所在列的循环链表中</div><div class="line">  每个结点含有五个域　**行号，列号，值，该结点所在行链表后继结点指针，所在列链表后继结点指针**</div><div class="line"></div><div class="line">  为了处理方便，通常对每个行链表和列链表分别设置一个头结点，并把它们构成带表头结点的循环链表。</div><div class="line">  为了引用某行某列方便，全部行链表的表头结点和全部列链表的表头结点分别组成数组，这两个数组的首结点指针存于</div><div class="line">  一个十字链表的头结点中，最后由一个指针指向该头结点。</div><div class="line"></div><div class="line">  相关代码为：</div></pre></td></tr></table></figure>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">&gt; 如果对稀疏矩阵某行或某列整体做某处理，可能会使原来为零的元素变为非零，而原来非零的元素变为零，</div><div class="line">&gt; 对于这种场合，稀疏矩阵应该采用十字链表来表示</div><div class="line"></div><div class="line">#### KMP算法</div><div class="line"></div><div class="line">相关代码为：</div></pre></td></tr></table></figure>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">求<span class="keyword">next</span>函数的值</div></pre></td></tr></table></figure>
+<p>next[j] = 0         j = 1;<br>next[j] = max{k|1 &lt; k &lt; j,’p1p2…pk-1’ = ‘pj-k+1pj-k+2…pj-1’}<br>next[j] = 1 其他情况<br>```</p>
+<h3 id="树和二叉树"><a href="#树和二叉树" class="headerlink" title="树和二叉树"></a>树和二叉树</h3><p><div id="disqus_thread"></div></p>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-xrlrf-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="external">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//https-xrlrf-github-io.disqus.com/count.js" async></script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107582762-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107582762-1');
+</script>
+
+
+<!-- UY BEGIN -->
+<p><div id="uyan_frame"></div></p>
+<p><script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145975"></script><br><!-- UY END --></p>
+
       
     </div>
     
@@ -686,8 +809,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -794,6 +926,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-线性表"><span class="nav-number">1.</span> <span class="nav-text">1.1 线性表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表的基本运算"><span class="nav-number">1.1.</span> <span class="nav-text">线性表的基本运算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线性表的存储"><span class="nav-number">1.2.</span> <span class="nav-text">线性表的存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在线性表中插入新结点"><span class="nav-number">1.3.</span> <span class="nav-text">在线性表中插入新结点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除线性表的结点"><span class="nav-number">1.4.</span> <span class="nav-text">删除线性表的结点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-栈"><span class="nav-number">1.5.</span> <span class="nav-text">1.1.1 栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-队列"><span class="nav-number">1.6.</span> <span class="nav-text">1.1.2 队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-稀疏矩阵"><span class="nav-number">1.7.</span> <span class="nav-text">1.1.3 稀疏矩阵</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树和二叉树"><span class="nav-number">2.</span> <span class="nav-text">树和二叉树</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
