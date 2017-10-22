@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Qt," />
 
 
 
@@ -125,17 +125,18 @@
 
 
 
-<meta name="description" content="真正的荣耀发端于埋头苦干征服自己！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="note">
-<meta property="og:url" content="http://wustxiao.cn/note/index.html">
+<meta name="description" content="创建主窗口   一个应用程序的完整用户界面，包括菜单，工具栏，状态栏以及应用程序所需的足够多的对话框 子类化QMainWindow 通过子类化QMainWindow，可以创建一个应用程序的主窗口。由于QDialog和QMainWindow都派生自QWidget。  mainwindow.h 123456789101112131415161718192021222324252627282930313">
+<meta name="keywords" content="Qt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++GUI Programming with QT学习笔记day03">
+<meta property="og:url" content="http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/index.html">
 <meta property="og:site_name" content="xiaorui&#39;s blog">
-<meta property="og:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta property="og:description" content="创建主窗口   一个应用程序的完整用户界面，包括菜单，工具栏，状态栏以及应用程序所需的足够多的对话框 子类化QMainWindow 通过子类化QMainWindow，可以创建一个应用程序的主窗口。由于QDialog和QMainWindow都派生自QWidget。  mainwindow.h 123456789101112131415161718192021222324252627282930313">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-05T14:59:35.884Z">
+<meta property="og:updated_time" content="2017-10-21T14:13:34.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="note">
-<meta name="twitter:description" content="真正的荣耀发端于埋头苦干征服自己！">
+<meta name="twitter:title" content="C++GUI Programming with QT学习笔记day03">
+<meta name="twitter:description" content="创建主窗口   一个应用程序的完整用户界面，包括菜单，工具栏，状态栏以及应用程序所需的足够多的对话框 子类化QMainWindow 通过子类化QMainWindow，可以创建一个应用程序的主窗口。由于QDialog和QMainWindow都派生自QWidget。  mainwindow.h 123456789101112131415161718192021222324252627282930313">
 
 
 
@@ -165,13 +166,13 @@
 
 
 
-  <link rel="canonical" href="http://wustxiao.cn/note/"/>
+  <link rel="canonical" href="http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/"/>
 
 
 
 
 
-  <title>note | xiaorui's blog</title>
+  <title>C++GUI Programming with QT学习笔记day03 | xiaorui's blog</title>
   
 
 
@@ -379,33 +380,292 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiao Rui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xiaorui's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">note</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">C++GUI Programming with QT学习笔记day03</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-21T18:23:51+08:00">
+                2017-10-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Qt学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Qt学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/21/C-GUI-Programming-with-QT学习笔记day03/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/" class="leancloud_visitors" data-flag-title="C++GUI Programming with QT学习笔记day03">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <center>创建主窗口</center>
+
+
+<p>一个应用程序的完整用户界面，包括菜单，工具栏，状态栏以及应用程序所需的足够多的对话框</p>
+<h3 id="子类化QMainWindow"><a href="#子类化QMainWindow" class="headerlink" title="子类化QMainWindow"></a>子类化QMainWindow</h3><blockquote>
+<p>通过子类化QMainWindow，可以创建一个应用程序的主窗口。由于QDialog和QMainWindow都派生自QWidget。</p>
+</blockquote>
+<p>mainwindow.h</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAINWINDOW_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> MAINWINDOW_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;QMainWindow&gt;</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QAction</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QLabel</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FindDialog</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Spreadsheet</span>;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span>:</span><span class="keyword">public</span> QMainWindow</div><div class="line">&#123;</div><div class="line">	Q_OBJECT</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	MainWindow();</div><div class="line"><span class="keyword">protected</span>:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">closeEvent</span><span class="params">(QCloseEvent *event)</span></span>;</div><div class="line"><span class="keyword">private</span> slots:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">newFile</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">open</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">save</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">saveAs</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">find</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">goToCell</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">about</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">openRecentFile</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">updateStatusBar</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">spreadsheetModified</span><span class="params">()</span></span>;</div><div class="line"><span class="keyword">private</span>:</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">createActions</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">createMenus</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">createContextMenu</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">createToolBars</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">readSettings</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">writeSettings</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">okToContinue</span><span class="params">()</span></span>;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">loadFile</span><span class="params">(<span class="keyword">const</span> QString &amp;fileName)</span></span>;</div><div class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">saveFile</span><span class="params">(<span class="keyword">const</span> QString &amp;fileName)</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setCurrentFile</span><span class="params">(<span class="keyword">const</span> QString &amp;fileName)</span></span>;</div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">updateRecentFileActions</span><span class="params">()</span></span>;</div><div class="line">	<span class="function">QString <span class="title">strippedName</span><span class="params">(<span class="keyword">const</span> QString &amp;fullFileName)</span></span>;</div><div class="line">	Spreadsheet *spreadsheet;</div><div class="line">	FindDialog *findDialog;</div><div class="line">	QLabel *locationLabel;</div><div class="line">	QLabel *formulaLabel;</div><div class="line">	QStringList recentFiles;</div><div class="line">	QString curFile;</div><div class="line"></div><div class="line">	<span class="keyword">enum</span> &#123;MaxRecentFiles = <span class="number">5</span>&#125;;</div><div class="line">	QAction *recentFileActions[MaxRecentFiles];</div><div class="line">	QAction *separatorAction;</div><div class="line"></div><div class="line">	QMenu *fileMenu;</div><div class="line">	QMenu *editMenu;</div><div class="line"></div><div class="line">	QToolBar *fileToolBar;</div><div class="line">	QToolBar *editToolBar;</div><div class="line">	QAction *newAction;</div><div class="line">	QAction *openAction;</div><div class="line">	QAction *aboutQtAction;</div><div class="line">&#125;;</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>当槽作为一个信号的相应函数而被设计时，就会忽略他的返回值。当把槽作为函数来调用时，和普通的C++函数的作用是一样的。</p>
+</blockquote>
+<p>gotocelldialog.h</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> GOTOCELLDIALOG_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> GOTOCELLDIALOG_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDialog&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_gotocelldialog.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GoToCellDialog</span> :</span> <span class="keyword">public</span> QDialog, <span class="keyword">public</span> Ui::GoToCellDialog</div><div class="line">&#123;</div><div class="line">    Q_OBJECT</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    GoToCellDialog(QWidget *parent = <span class="number">0</span>);</div><div class="line"></div><div class="line"><span class="keyword">private</span> slots:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">on_lineEdit_textChanged</span><span class="params">()</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<p>finddialog.h<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> FINDDIALOG_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> FINDDIALOG_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDialog&gt;</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QCheckBox</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QLabel</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QLineEdit</span>;</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">QPushButton</span>;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">FindDialog</span> :</span> <span class="keyword">public</span> QDialog</div><div class="line">&#123;</div><div class="line">    Q_OBJECT</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    FindDialog(QWidget *parent = <span class="number">0</span>);</div><div class="line"></div><div class="line">signals:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findNext</span><span class="params">(<span class="keyword">const</span> QString &amp;str, Qt::CaseSensitivity cs)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findPrevious</span><span class="params">(<span class="keyword">const</span> QString &amp;str, Qt::CaseSensitivity cs)</span></span>;</div><div class="line"></div><div class="line"><span class="keyword">private</span> slots:</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">findClicked</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">enableFindButton</span><span class="params">(<span class="keyword">const</span> QString &amp;text)</span></span>;</div><div class="line"></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    QLabel *label;</div><div class="line">    QLineEdit *lineEdit;</div><div class="line">    QCheckBox *caseCheckBox;</div><div class="line">    QCheckBox *backwardCheckBox;</div><div class="line">    QPushButton *findButton;</div><div class="line">    QPushButton *closeButton;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure></p>
+<p>sortdialog.h</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> SORTDIALOG_H</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> SORTDIALOG_H</span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QDialog&gt;</span></span></div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_sortdialog.h"</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SortDialog</span> :</span> <span class="keyword">public</span> QDialog, <span class="keyword">public</span> Ui::SortDialog</div><div class="line">&#123;</div><div class="line">    Q_OBJECT</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    SortDialog(QWidget *parent = <span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setColumnRange</span><span class="params">(QChar first, QChar last)</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+<p>mainwindow.cpp</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QtGui&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"finddialog.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"gotocelldialog.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"mainwindow.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"sortdialog.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="string">"spreadsheet.h"</span></span></div><div class="line"></div><div class="line"><span class="symbol">MainWindow:</span>:MainWindow()</div><div class="line">&#123;</div><div class="line">	spread = new Spreadsheet;</div><div class="line">	setCentralWidget(spreadsheet);</div><div class="line"></div><div class="line">	createActions();</div><div class="line">	createMenus();</div><div class="line">	createContextMenu();</div><div class="line">	createToolBars();</div><div class="line">	createStatusBar();</div><div class="line"></div><div class="line">	readSettings();</div><div class="line"></div><div class="line">	findDialog = <span class="number">0</span>;</div><div class="line"></div><div class="line">	setWindowIcon();</div><div class="line">	setCurrentFile(<span class="string">""</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信.png" alt="Xiao Rui 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝.png" alt="Xiao Rui 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/支付宝.png" alt="Xiao Rui 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Xiao Rui
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/" title="C++GUI Programming with QT学习笔记day03">http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Qt/" rel="tag"># Qt</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/17/软考复习：数据结构基础-1-1线性表/" rel="next" title="软考复习：数据结构基础(1.1线性表)">
+                <i class="fa fa-chevron-left"></i> 软考复习：数据结构基础(1.1线性表)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/22/jQuery基础/" rel="prev" title="jQuery基础">
+                jQuery基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -448,8 +708,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,6 +825,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#子类化QMainWindow"><span class="nav-number">1.</span> <span class="nav-text">子类化QMainWindow</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -779,9 +1064,9 @@ NexT.Mist</a> v5.1.3</div>
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://wustxiao.cn/note/index.html';
-          this.page.identifier = 'note/index.html';
-          this.page.title = 'note';
+          this.page.url = 'http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/';
+          this.page.identifier = '2017/10/21/C-GUI-Programming-with-QT学习笔记day03/';
+          this.page.title = 'C++GUI Programming with QT学习笔记day03';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://https-xrlrf-github-io.disqus.com.disqus.com/embed.js';
