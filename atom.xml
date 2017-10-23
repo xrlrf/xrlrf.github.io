@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wustxiao.cn/"/>
-  <updated>2017-10-23T14:29:45.532Z</updated>
+  <updated>2017-10-23T14:34:58.961Z</updated>
   <id>http://wustxiao.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++GUI Programming with QT学习笔记day04</title>
+    <link href="http://wustxiao.cn/2017/10/22/C-GUI-Programming-with-QT%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0day04/"/>
+    <id>http://wustxiao.cn/2017/10/22/C-GUI-Programming-with-QT学习笔记day04/</id>
+    <published>2017-10-22T13:21:11.000Z</published>
+    <updated>2017-10-23T14:34:58.961Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://upload-images.jianshu.io/upload_images/4077777-c50e74a923d98320.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="创建Qt项目"></p><p>选择基类有三个选项</p><ul><li>QMainWindow 　　　　　　　　　＃带菜单栏的，主要是在PC下使用</li><li>QWidget　　　　　　　　　　　　# 空白窗口</li><li>QDialog　　　　　　　　　　　　# 对话框</li></ul><h3 id="Qt4与Qt5信号与槽机制的区别"><a href="#Qt4与Qt5信号与槽机制的区别" class="headerlink" title="Qt4与Qt5信号与槽机制的区别"></a>Qt4与Qt5信号与槽机制的区别</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">Qt4:</span> <span class="string">QObject:</span>:connect(button,SIGNAL(clicked()),<span class="keyword">this</span>,SLOT(quit()));</div><div class="line"><span class="string">Qt5:</span> connect(button,&amp;<span class="string">QPushButton:</span>:clicked,<span class="keyword">this</span>,&amp;<span class="string">QWidget:</span>:close);</div></pre></td></tr></table></figure><h3 id="自定义槽函数"><a href="#自定义槽函数" class="headerlink" title="自定义槽函数"></a>自定义槽函数</h3><ol><li>在Qt4里面，自定义槽函数只能放在<code>public slots</code>下面</li><li>在Qt5里面，没有那么严格，普通的成员函数或者全局函数，静态函数都可以作为槽函数。</li><li>在Qt5里面，槽函数还可以是lambda匿名函数表达式</li></ol><figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">connect(<span class="name">button</span>,<span class="symbol">&amp;QPushButton</span>:<span class="symbol">:clicked</span>,</div><div class="line">              []()</div><div class="line">              &#123;</div><div class="line">              &#125;</div><div class="line">)</div></pre></td></tr></table></figure><p><strong>[]的作用是把外部变量传进来</strong><br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="string">b4</span>](<span class="link"></span>)</div><div class="line">&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p><ul><li><code>[=]: 把外部所有局部变量，类中所有成员通过值传递方式，默认为只读</code></li><li><code>[&amp;]: 把外部所有局部变量，通过址传递</code></li><li><code>[this]: 类中所有成员以值传递方式</code></li></ul><blockquote><p>Qt头文件没有.h<br>头文件和类名一样</p></blockquote><h3 id="Qt项目文件"><a href="#Qt项目文件" class="headerlink" title="Qt项目文件"></a>Qt项目文件</h3><p>.pro</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 模块</span></div><div class="line">QT　　　　　　　＋＝　core gui</div><div class="line"><span class="comment"># 高于４版本，添加QT+=widgets,为了兼容Qt4</span></div><div class="line"><span class="section">greaterThan(QT_MAJOR_VERSION,4):QT +=widgets</span></div><div class="line"><span class="comment"># 应用程序的名字</span></div><div class="line">TARGET=  mike</div><div class="line"><span class="comment"># 指定makefile的类型,app|lib</span></div><div class="line">TEMPLATE = app</div><div class="line"><span class="comment"># 源文件</span></div><div class="line">SOURCE += main.cpp\</div></pre></td></tr></table></figure><blockquote><p>自定义槽，普通函数的用法<br>Qt5: 任意的成员函数，普通全局函数，静态函数<br>槽函数需要和信号一致（参数，返回值）<br>由于信号都是没有返回值的，所以，槽函数一定没有返回值<br>信号的参数可以多于槽，但槽的参数不能多于信号的参数</p></blockquote><p><strong>注意：引用lambda表达式时，需要在项目文件中末尾添加CONFIG += C++11</strong></p><h3 id="Qt样式表"><a href="#Qt样式表" class="headerlink" title="Qt样式表"></a>Qt样式表</h3><figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">ui</span>-&gt;</span><span class="function"><span class="title">label</span>-&gt;</span>setStyleSheet(<span class="string">"QLabel&#123;"</span></div><div class="line">                         <span class="string">"color:red;"</span></div><div class="line">                         <span class="string">"background-color:black&#125;"</span>);</div></pre></td></tr></table></figure><h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><ul><li><p>局部布局</p><blockquote><p>选中要局部布局的部件进行勾选</p></blockquote></li><li><p>全局布局</p></li></ul><p>注意：<br><strong>先局部布局，再全局布局<br>布局时，借用容器来分成多个模块</strong></p><p>使用自定义控件时，在需要的地方，右击提升为，选择自己写的部件类。</p><p><img src="http://upload-images.jianshu.io/upload_images/4077777-8807b610bb3376d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提升为.png"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4077777-c50e74a923d98320.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; 
+      
+    
+    </summary>
+    
+      <category term="Qt学习" scheme="http://wustxiao.cn/categories/Qt%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Qt" scheme="http://wustxiao.cn/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery基础</title>
