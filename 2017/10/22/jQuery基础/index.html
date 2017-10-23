@@ -138,7 +138,10 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20171022111948487?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171022113500855?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20171022131245098?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-10-22T05:28:47.728Z">
+<meta property="og:image" content="http://img.blog.csdn.net/20171022231716234?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171022232357653?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20171022232820569?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-10-23T14:29:45.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery基础">
 <meta name="twitter:description" content="jQueryHelloWorld体验当页面加载完成后，在页面中以居中的方式显示“您好！Hello World!”字样。 123456789101112131415161718192021222324&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charset=&quot;utf-8&quot;/&amp;gt;    &amp;lt;title&amp;gt;第一个简单的">
@@ -651,7 +654,71 @@ jQuery对象与DOM对象是不一样的
 
 [attr=&quot;value&quot;]能帮我们定位不同类型的元素，特别是表单form元素的操作，比如说input[type=&quot;text&quot;],input[type=&quot;checkbox&quot;]等
 [attr*=&quot;value&quot;]能在网站中帮助我们匹配不同类型的文件
-</code></pre><p>  <div id="disqus_thread"></div><br>  <script></p>
+</code></pre><h3 id="jQuery选择器之子元素筛选选择器"><a href="#jQuery选择器之子元素筛选选择器" class="headerlink" title="jQuery选择器之子元素筛选选择器"></a>jQuery选择器之子元素筛选选择器</h3><pre><code>子元素筛选选择器不常使用，其筛选规则比起其它的选择器稍微要复杂点
+</code></pre><p>  子元素筛选选择器描述表：</p>
+<p>  <img src="http://img.blog.csdn.net/20171022231716234?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>  <strong>注意事项</strong>：</p>
+<ol>
+<li>:first只匹配一个单独的元素，但是:first-child选择器可以匹配多个：即为每个父级元素匹配第一个子元素。这相当于:nth-child(1)</li>
+<li>:last 只匹配一个单独的元素， :last-child 选择器可以匹配多个元素：即，为每个父级元素匹配最后一个子元素</li>
+<li>如果子元素只有一个的话，:first-child与:last-child是同一个</li>
+<li>:only-child匹配某个元素是父元素中唯一的子元素，就是说当前子元素是父元素中唯一的元素，则匹配</li>
+<li>jQuery实现:nth-child(n)是严格来自CSS规范，所以n值是“索引”，也就是说，从1开始计数，:nth-child(index)从1开始的，而eq(index)是从0开始的</li>
+<li>nth-child(n) 与 :nth-last-child(n) 的区别前者是从前往后计算，后者从后往前计算</li>
+</ol>
+<h3 id="jQuery选择器之表单元素选择器"><a href="#jQuery选择器之表单元素选择器" class="headerlink" title="jQuery选择器之表单元素选择器"></a>jQuery选择器之表单元素选择器</h3><pre><code>无论是提交还是传递数据，表单元素在动态交互页面的作用是非常重要的。jQuery中专门加入了表单选择器，从而能够极其方便地获取到某个类型的表单元素
+</code></pre><p>  表单选择器的具体方法描述：</p>
+<p>  <img src="http://img.blog.csdn.net/20171022232357653?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>  注意事项：</p>
+<p>  除了input筛选选择器，几乎每个表单类别筛选器都对应一个input元素的type值。大部分表单类别筛选器可以使用属性筛选器替换。比如 <code>$(&#39;:password&#39;) == $(&#39;[type=password]&#39;)</code></p>
+<h3 id="jQuery选择器之表单对象属性筛选选择器"><a href="#jQuery选择器之表单对象属性筛选选择器" class="headerlink" title="jQuery选择器之表单对象属性筛选选择器"></a>jQuery选择器之表单对象属性筛选选择器</h3><pre><code>除了表单元素选择器外，表单对象属性筛选选择器也是专门针对表单元素的选择器，可以附加在其他选择器的后面，主要功能是对所选择的表单元素进行筛选
+</code></pre><p>  表单筛选选择器的描述：</p>
+<p>  <img src="http://img.blog.csdn.net/20171022232820569?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHI0Njk3ODY3MDY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>  注意事项：</p>
+<blockquote>
+<p>选择器适用于复选框和单选框，对于下拉框元素, 使用 :selected 选择器<br>在某些浏览器中，选择器:checked可能会错误选取到<code>&lt;option&gt;</code>元素，所以保险起见换用选择器input:checked，确保只会选取<code>&lt;input&gt;</code>元素</p>
+</blockquote>
+<h3 id="jQuery选择器之特殊选择器this"><a href="#jQuery选择器之特殊选择器this" class="headerlink" title="jQuery选择器之特殊选择器this"></a>jQuery选择器之特殊选择器this</h3><pre><code>相信很多刚接触jQuery的人，很多都会对$(this)和this的区别模糊不清，那么这两者有什么区别呢？
+</code></pre><p>  this是JavaScript中的关键字，指的是当前的上下文对象，简单的说就是方法/属性的所有者</p>
+<p>  下面例子中，imooc是一个对象，拥有name属性与getName方法,在getName中this指向了所属的对象imooc</p>
+  <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> imooc = &#123;</div><div class="line">    name:<span class="string">"慕课网"</span>,</div><div class="line">    getName:<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="comment">//this,就是imooc对象</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">imooc.getName(); <span class="comment">//慕课网</span></div></pre></td></tr></table></figure>
+<pre><code>当然在JavaScript中this是动态的，也就是说这个上下文对象都是可以被动态改变的(可以通过call,apply等方法)，具体的大家可以查阅相关资料
+
+同样的在DOM中this就是指向了这个html元素对象，因为this就是DOM元素本身的一个引用
+</code></pre><p>  假如给页面一个P元素绑定一个事件:</p>
+  <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">p.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="comment">//this === p</span></div><div class="line">    <span class="comment">//以下两者的修改都是等价的</span></div><div class="line">    <span class="keyword">this</span>.style.color = <span class="string">"red"</span>;</div><div class="line">    p.style.color = <span class="string">"red"</span>;</div><div class="line">&#125;,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
+<p>  通过addEventListener绑定的事件回调中，this指向的是当前的dom对象，所以再次修改这样对象的样式，只需要通过this获取到引用即可</p>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this<span class="selector-class">.style</span><span class="selector-class">.color</span> = <span class="string">"red"</span></div></pre></td></tr></table></figure>
+<p>  但是这样的操作其实还是很不方便的，这里面就要涉及一大堆的样式兼容，如果通过jQuery处理就会简单多了，我们只需要把this加工成jQuery对象</p>
+<p>  换成jQuery的做法：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'p'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//把p元素转化成jQuery的对象</span></div><div class="line">    <span class="keyword">var</span> $<span class="keyword">this</span>= $(<span class="keyword">this</span>)</div><div class="line">    $<span class="keyword">this</span>.css(<span class="string">'color'</span>,<span class="string">'red'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<pre><code>通过把$()方法传入当前的元素对象的引用this，把这个this加工成jQuery对象，我们就可以用jQuery提供的快捷方法直接处理样式了
+</code></pre><p>  总体：</p>
+<blockquote>
+<p>this，表示当前的上下文对象是一个html对象，可以调用html对象所拥有的属性和方法。<br>$(this),代表的上下文对象是一个jquery的上下文对象，可以调用jQuery的方法和属性值。</p>
+</blockquote>
+<h3 id="jQuery的属性与样式之-attr-与-removeAttr"><a href="#jQuery的属性与样式之-attr-与-removeAttr" class="headerlink" title="jQuery的属性与样式之.attr()与.removeAttr()"></a>jQuery的属性与样式之.attr()与.removeAttr()</h3><pre><code>每个元素都有一个或者多个特性，这些特性的用途就是给出相应元素或者其内容的附加信息。如：在img元素中，src就是元素的特性，用来标记图片的地址。
+</code></pre><p>  操作特性的DOM方法主要有3个，getAttribute方法、setAttribute方法和removeAttribute方法，就算如此在实际操作中还是会存在很多问题，这里先不说。而在jQuery中用一个attr()与removeAttr()就可以全部搞定了，包括兼容问题</p>
+<p>  jQuery中用attr()方法来获取和设置元素属性,attr是attribute（属性）的缩写，在jQuery DOM操作中会经常用到attr()</p>
+<p>  <strong>attr()有4个表达式</strong></p>
+<ol>
+<li>attr(传入属性名)：获取属性的值</li>
+<li>attr(属性名, 属性值)：设置属性的值</li>
+<li>attr(属性名,函数值)：设置属性的函数值</li>
+<li><p>attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }</p>
+<p><strong>removeAttr()删除方法</strong></p>
+<p>.removeAttr( attributeName ) : 为匹配的元素集合中的每个元素中移除一个属性（attribute）</p>
+<p>优点：</p>
+<p> attr、removeAttr都是jQuery为了属性操作封装的，直接在一个 jQuery 对象上调用该方法，很容易对属性进行操作，也不需要去特意的理解浏览器的属性名不同的问题</p>
+<p><strong>注意的问题：</strong></p>
+<p>dom中有个概念的区分：Attribute和Property翻译出来都是“属性”，《js高级程序设计》书中翻译为“特性”和“属性”。简单理解，Attribute就是dom节点自带的属性</p>
+<p>例如：html中常用的id、class、title、align等：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"immooc"</span> title=<span class="string">"慕课网"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>而Property是这个DOM元素作为对象，其附加的内容，例如,tagName, nodeName, nodeType,, defaultChecked, 和 defaultSelected 使用.prop()方法进行取值或赋值等</p>
+<p><strong>获取Attribute就需要用attr，获取Property就需要用prop</strong></p>
+</li>
+</ol>
+<p>  <div id="disqus_thread"></div><br>  <script></p>
 <p>  /**</p>
 <ul>
 <li>RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.</li>
@@ -980,7 +1047,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQueryHelloWorld体验"><span class="nav-number">1.</span> <span class="nav-text">jQueryHelloWorld体验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象与DOM对象"><span class="nav-number">2.</span> <span class="nav-text">jQuery对象与DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象转化成DOM对象"><span class="nav-number">3.</span> <span class="nav-text">jQuery对象转化成DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM对象转化成jQuery对象"><span class="nav-number">4.</span> <span class="nav-text">DOM对象转化成jQuery对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之id选择器"><span class="nav-number">5.</span> <span class="nav-text">jQuery选择器之id选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之类选择器"><span class="nav-number">6.</span> <span class="nav-text">jQuery选择器之类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之元素选择器"><span class="nav-number">7.</span> <span class="nav-text">jQuery选择器之元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之全选择器（-选择器）"><span class="nav-number">8.</span> <span class="nav-text">jQuery选择器之全选择器（*选择器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之层级选择器"><span class="nav-number">9.</span> <span class="nav-text">jQuery选择器之层级选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之基本筛选选择器"><span class="nav-number">10.</span> <span class="nav-text">jQuery选择器之基本筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之内容筛选选择器"><span class="nav-number">11.</span> <span class="nav-text">jQuery选择器之内容筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之可见性筛选选择器"><span class="nav-number">12.</span> <span class="nav-text">jQuery选择器之可见性筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之属性筛选选择器"><span class="nav-number">13.</span> <span class="nav-text">jQuery选择器之属性筛选选择器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQueryHelloWorld体验"><span class="nav-number">1.</span> <span class="nav-text">jQueryHelloWorld体验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象与DOM对象"><span class="nav-number">2.</span> <span class="nav-text">jQuery对象与DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象转化成DOM对象"><span class="nav-number">3.</span> <span class="nav-text">jQuery对象转化成DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM对象转化成jQuery对象"><span class="nav-number">4.</span> <span class="nav-text">DOM对象转化成jQuery对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之id选择器"><span class="nav-number">5.</span> <span class="nav-text">jQuery选择器之id选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之类选择器"><span class="nav-number">6.</span> <span class="nav-text">jQuery选择器之类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之元素选择器"><span class="nav-number">7.</span> <span class="nav-text">jQuery选择器之元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之全选择器（-选择器）"><span class="nav-number">8.</span> <span class="nav-text">jQuery选择器之全选择器（*选择器）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之层级选择器"><span class="nav-number">9.</span> <span class="nav-text">jQuery选择器之层级选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之基本筛选选择器"><span class="nav-number">10.</span> <span class="nav-text">jQuery选择器之基本筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之内容筛选选择器"><span class="nav-number">11.</span> <span class="nav-text">jQuery选择器之内容筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之可见性筛选选择器"><span class="nav-number">12.</span> <span class="nav-text">jQuery选择器之可见性筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之属性筛选选择器"><span class="nav-number">13.</span> <span class="nav-text">jQuery选择器之属性筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之子元素筛选选择器"><span class="nav-number">14.</span> <span class="nav-text">jQuery选择器之子元素筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之表单元素选择器"><span class="nav-number">15.</span> <span class="nav-text">jQuery选择器之表单元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之表单对象属性筛选选择器"><span class="nav-number">16.</span> <span class="nav-text">jQuery选择器之表单对象属性筛选选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery选择器之特殊选择器this"><span class="nav-number">17.</span> <span class="nav-text">jQuery选择器之特殊选择器this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery的属性与样式之-attr-与-removeAttr"><span class="nav-number">18.</span> <span class="nav-text">jQuery的属性与样式之.attr()与.removeAttr()</span></a></li></ol></div>
             
 
           </div>
