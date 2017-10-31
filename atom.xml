@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wustxiao.cn/"/>
-  <updated>2017-10-30T09:27:20.403Z</updated>
+  <updated>2017-10-31T05:32:57.997Z</updated>
   <id>http://wustxiao.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LinuxC基础－（文件操作）</title>
+    <link href="http://wustxiao.cn/2017/10/31/LinuxC%E5%9F%BA%E7%A1%80%EF%BC%8D%EF%BC%88%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%89/"/>
+    <id>http://wustxiao.cn/2017/10/31/LinuxC基础－（文件操作）/</id>
+    <published>2017-10-31T04:50:19.000Z</published>
+    <updated>2017-10-31T05:32:57.997Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight tap"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">man<span class="number"> 2 </span>mkdir          <span class="comment"># 系统调用帮助文档</span></div><div class="line">man<span class="number"> 3 </span>&lt;库函数名&gt;      <span class="comment"># 库函数帮助信息</span></div></pre></td></tr></table></figure><h3 id="Linux的文件结构"><a href="#Linux的文件结构" class="headerlink" title="Linux的文件结构"></a>Linux的文件结构</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="string">/bin</span>                 <span class="comment"># 用于存放普通用户可执行的命令，系统中任何用户都可以执行该目录下的命令，如ls,cp,mkdir等命令</span></div><div class="line"></div><div class="line"><span class="string">/boot</span>                <span class="comment"># Linux的内核及启动系统时所需要的文件，为保证启动文件更加安全可靠，通常把该目录存放在独立的分区上</span></div><div class="line"></div><div class="line"><span class="string">/dev</span>                 <span class="comment"># 设备文件的存储目录，如硬盘，光驱等</span></div><div class="line"></div><div class="line"><span class="string">/etc</span>                 <span class="comment"># 用于存放系统的配置文件</span></div><div class="line"></div><div class="line"><span class="string">/home</span>                <span class="comment"># 普通用户主目录</span></div><div class="line"></div><div class="line"><span class="string">/lib</span> <span class="comment"># 用于存放各种库文件</span></div><div class="line"></div><div class="line"><span class="string">/proc</span>                <span class="comment"># 该目录是一个虚拟文件系统，只有在系统运行时才存在。通过访问该目录下的文件，可以获取系统的状态信息并且修改某些系统的配置信息</span></div><div class="line"></div><div class="line"><span class="string">/root</span>                <span class="comment"># 超级用户root的主目录</span></div><div class="line"></div><div class="line"><span class="string">/sbin</span>     <span class="comment"># 存放的是用于管理系统的命令</span></div><div class="line"></div><div class="line"><span class="string">/tmp</span>                 <span class="comment"># 临时文件目录</span></div><div class="line"></div><div class="line"><span class="string">/usr</span>                 <span class="comment"># 用于存放系统应用程序及相关文件，如说明文档，帮助文件等</span></div><div class="line"></div><div class="line"><span class="string">/var</span>                 <span class="comment"># 用于存放系统中经常变化的文件，如日志文件，用户邮件等</span></div></pre></td></tr></table></figure><h3 id="chmod-fchmod函数"><a href="#chmod-fchmod函数" class="headerlink" title="chmod/fchmod函数"></a>chmod/fchmod函数</h3><pre><code>所需头文件</code></pre><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/stat.h&gt;</span></span></div></pre></td></tr></table></figure><pre><code>函数原型</code></pre><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">chmod</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path,<span class="keyword">mode_t</span> mode)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fchmod</span><span class="params">(<span class="keyword">int</span> fildes,<span class="keyword">mode_t</span> mode)</span></span>;</div></pre></td></tr></table></figure><pre><code>函数说明</code></pre><p>chmod/fchmod的区别在于chmod以文件名作为第一个参数，fchmod以文件描述符作为第一个参数</p><pre><code>函数返回值说明</code></pre><p>权限更改成功返回０，失败返回-1,错误代码存于系统预定义变量errno中，错误代码的具体含义请参考man手册</p><p><strong>例子：利用chmod函数实现自己的精简化chmod命令</strong></p><p><div id="disqus_thread"></div></p><script>/***  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/(function() { // DON'T EDIT BELOW THIS LINEvar d = document, s = d.createElement('script');s.src = 'https://https-xrlrf-github-io.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="external">comments powered by Disqus.</a></noscript><script id="dsq-count-scr" src="//https-xrlrf-github-io.disqus.com/count.js" async></script><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-107582762-1"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'UA-107582762-1');</script><!-- UY BEGIN --><p><div id="uyan_frame"></div></p><p><script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145975"></script><br><!-- UY END --></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight tap&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;cod
+      
+    
+    </summary>
+    
+      <category term="Linux学习" scheme="http://wustxiao.cn/categories/Linux%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Linux" scheme="http://wustxiao.cn/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery基础二－(DOM篇)</title>
@@ -497,31 +522,6 @@
     
     
       <category term="软件" scheme="http://wustxiao.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客搭建（next主题系列详解）</title>
-    <link href="http://wustxiao.cn/2017/10/06/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%EF%BC%88next%E4%B8%BB%E9%A2%98%E7%B3%BB%E5%88%97%E8%AF%A6%E8%A7%A3%EF%BC%89/"/>
-    <id>http://wustxiao.cn/2017/10/06/Hexo博客搭建（next主题系列详解）/</id>
-    <published>2017-10-06T07:34:50.000Z</published>
-    <updated>2017-10-10T11:14:43.905Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="hexo的next主题配置详解"><a href="#hexo的next主题配置详解" class="headerlink" title="hexo的next主题配置详解"></a><a href="http://michael728.github.io/2015/11/30/hexo-next-optimize/" target="_blank" rel="external">hexo的next主题配置详解</a></h3><p><div id="disqus_thread"></div></p><script>/***  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/(function() { // DON'T EDIT BELOW THIS LINEvar d = document, s = d.createElement('script');s.src = 'https://https-xrlrf-github-io.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="external">comments powered by Disqus.</a></noscript><script id="dsq-count-scr" src="//https-xrlrf-github-io.disqus.com/count.js" async></script><!-- Global Site Tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-107582762-1"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'UA-107582762-1');</script><!-- UY BEGIN --><p><div id="uyan_frame"></div></p><p><script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2145975"></script><br><!-- UY END --></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;hexo的next主题配置详解&quot;&gt;&lt;a href=&quot;#hexo的next主题配置详解&quot; class=&quot;headerlink&quot; title=&quot;hexo的next主题配置详解&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://michael728.github.io/2015
-      
-    
-    </summary>
-    
-      <category term="Hexo学习" scheme="http://wustxiao.cn/categories/Hexo%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Hexo" scheme="http://wustxiao.cn/tags/Hexo/"/>
     
   </entry>
   

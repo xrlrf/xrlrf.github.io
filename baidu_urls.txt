@@ -1,5 +1,5 @@
+http://wustxiao.cn/2017/10/31/LinuxC基础－（文件操作）/
 http://wustxiao.cn/2017/10/30/jQuery基础二－-DOM篇/
 http://wustxiao.cn/2017/10/26/DOM事件探秘/
 http://wustxiao.cn/2017/10/22/C-GUI-Programming-with-QT学习笔记day04/
 http://wustxiao.cn/2017/10/22/jQuery基础/
-http://wustxiao.cn/2017/10/21/C-GUI-Programming-with-QT学习笔记day03/
